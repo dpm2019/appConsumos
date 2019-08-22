@@ -3,18 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragmento1">
+    tools:context=".CategoriasFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <!--
+
     <TextView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:text="Fragmento 1" />-->
+      android:text="Fragmento Categorias" />
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_alimentos"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        android:id="@+id/recycler_view_alimentos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
 </FrameLayout>

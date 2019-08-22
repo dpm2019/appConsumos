@@ -3,7 +3,6 @@ package com.example.appconsumos;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,27 +15,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-Fragmento1.OnFragmentInteractionListener,
+CategoriasFragment.OnFragmentInteractionListener,
 Fragmento2.OnFragmentInteractionListener {
-
-    //Implementando RecyclerView, es una version mejorada del ListView!
-    private List<Categorias> categoriasList = new ArrayList<>();
-    private RecyclerView recyclerView;
-    private CategoriasAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,37 +100,11 @@ Fragmento2.OnFragmentInteractionListener {
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Log.i("====>","Click en ...HOMEE!!");
+            Log.i("====>","Click en ...CATEGORIAS!!");
 
-            /*setContentView(R.layout.fragment_fragmento1);
-
-            recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
-            mAdapter = new CategoriasAdapter(categoriasList);
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-            recyclerView.setLayoutManager(mLayoutManager);
-            recyclerView.setItemAnimator(new DefaultItemAnimator());
-            recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
-            recyclerView.setAdapter(mAdapter);
-            prepareCategoriaData();
-*/
-            LayoutInflater inflater = getLayoutInflater();
-            View rootViewFrag1 = inflater.inflate(R.layout.fragment_fragmento1, null, false);
-
-            recyclerView = (RecyclerView) rootViewFrag1.findViewById(R.id.recycler_view_alimentos);
-                //findViewById(R.id.recycler_view_alimentos);
-            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(rootViewFrag1.getContext());
-            recyclerView.setLayoutManager(mLayoutManager);
-            recyclerView.setItemAnimator(new DefaultItemAnimator());
-            recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
-
-            recyclerView.setAdapter(mAdapter);
-            prepareCategoriaData();
-
-            // añadir context de frag1 a contenedor principal
+            // añadir context de frag1 (CATEGORIAS) a contenedor principal
             fragmentManager.beginTransaction().replace(R.id.contenedor,
-                    new Fragmento1()).commit();
+                    new CategoriasFragment()).commit();
 
         } else if (id == R.id.nav_gallery) {
             // Handle the camera action
@@ -162,23 +123,13 @@ Fragmento2.OnFragmentInteractionListener {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        Log.i("====>","Click en ...SALIRR HOMEE!!");
+        Log.i("====>","Click en ...SALIR NAVIGATION!!");
         return true;
     }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
 
-    }
-
-    private void prepareCategoriaData() {
-        Categorias categoria = new Categorias("1","Carnes");
-        categoriasList.add(categoria);
-
-        categoria = new Categorias("1","Frutas");
-        categoriasList.add(categoria);
-
-        mAdapter.notifyDataSetChanged();
     }
 
 }
