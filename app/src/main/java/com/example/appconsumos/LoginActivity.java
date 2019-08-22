@@ -15,7 +15,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void cargarCategorias(View v){
-        Intent k = new Intent(this, CategoriasActivity.class);
+        //Intent k = new Intent(this, CategoriasActivity.class);
+        Intent k = new Intent(this, NavigationDrawerActivity.class);
         startActivity(k);
     }
 }

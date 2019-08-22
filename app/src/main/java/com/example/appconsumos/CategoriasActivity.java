@@ -22,6 +22,7 @@ public class CategoriasActivity extends AppCompatActivity {
     { // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
 
+        //personalizar detalles en menu
         SearchView searchView = (SearchView) menu.findItem(R.id.id_bar_search_alimento).getActionView();
         int searchSrcTextId = getResources().getIdentifier("android:id/search_src_text", null, null);
         EditText searchEditText = (EditText) searchView.findViewById(searchSrcTextId);
@@ -55,10 +56,10 @@ public class CategoriasActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(mAdapter);
 
-        preparePeliculaData();
+        prepareCategoriaData();
     }
 
-    private void preparePeliculaData() {
+    private void prepareCategoriaData() {
         Categorias categoria = new Categorias("1","Carnes");
         categoriasList.add(categoria);
 
