@@ -22,8 +22,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-CategoriasFragment.OnFragmentInteractionListener,
-Fragmento2.OnFragmentInteractionListener {
+CategoriasFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,7 +108,7 @@ Fragmento2.OnFragmentInteractionListener {
         } else if (id == R.id.nav_gallery) {
             // Handle the camera action
             fragmentManager.beginTransaction().replace(R.id.contenedor,
-                    new Fragmento2()).commit();
+                    new CategoriasFragment()).commit();
 
         } else if (id == R.id.nav_slideshow) {
 

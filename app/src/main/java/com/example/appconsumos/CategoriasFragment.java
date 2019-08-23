@@ -77,7 +77,7 @@ public class CategoriasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View categoriaView = inflater.inflate(R.layout.fragment_fragmento1, container, false);
+        View categoriaView = inflater.inflate(R.layout.fragment_categorias, container, false);
 
         //Implementando RecyclerView, es una version mejorada del ListView!
         recyclerView = (RecyclerView) categoriaView.findViewById(R.id.recycler_view_alimentos);
