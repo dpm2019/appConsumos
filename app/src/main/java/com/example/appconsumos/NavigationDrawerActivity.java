@@ -22,8 +22,10 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-CategoriasFragment.OnFragmentInteractionListener,
-        AlimentosFragment.OnFragmentInteractionListener{
+        CategoriasFragment.OnFragmentInteractionListener,
+        AlimentosFragment.OnFragmentInteractionListener,
+        NuevoAlimentoFragment.OnFragmentInteractionListener,
+        NotificacionesFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,8 +115,18 @@ CategoriasFragment.OnFragmentInteractionListener,
                     new AlimentosFragment()).commit();
 
         } else if (id == R.id.nav_slideshow) {
+            Log.i("====>","Click en ...NUEVO ALIMENTO!!");
+            // añadir context de fragment (NUEVO ALIMENTO) a contenedor principal
+            // Handle the camera action
+            fragmentManager.beginTransaction().replace(R.id.contenedor,
+                    new NuevoAlimentoFragment()).commit();
 
         } else if (id == R.id.nav_tools) {
+            Log.i("====>","Click en ...NOTIFICACIONES!!");
+            // añadir context de fragment (NOTIFICACIONES) a contenedor principal
+            // Handle the camera action
+            fragmentManager.beginTransaction().replace(R.id.contenedor,
+                    new NotificacionesFragment()).commit();
 
         } else if (id == R.id.nav_share) {
 

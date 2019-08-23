@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificacionesFragment">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!-- <TextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="Fragmento Categorias" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/textViewNuevoAlimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="CONTROL DE NOTIFICACIONES"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/textViewNumDiarioNotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cantidad de veces al día:" />
+
+            <EditText
+                android:id="@+id/editTextNumDiarioNotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingresar información"
+                android:inputType="number" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/checkBoxAlertAlimVenc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Alertar Alimentos Vencidos" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/buttonRegistrarNotif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

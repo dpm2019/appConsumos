@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NuevoAlimentoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!-- <TextView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:text="Fragmento Categorias" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- TODO: Update blank fragment layout -->
+            <TextView
+                android:id="@+id/textViewNuevoAlimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="NUEVO ALIMENTO"
+                android:textAlignment="center"
+                />
+
+            <TextView
+                android:id="@+id/textViewDescAlimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alimento" />
+
+            <EditText
+                android:id="@+id/editTextDescAlimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Ingresar información" />
+
+            <TextView
+                android:id="@+id/textViewDescCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categoría" />
+
+            <EditText
+                android:id="@+id/editTextDescCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Ingresar información" />
+
+            <TextView
+                android:id="@+id/textViewFecVcto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de Vencimiento" />
+
+            <EditText
+                android:id="@+id/editTextFecVcto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Ingresar información" />
+
+            <TextView
+                android:id="@+id/textViewUnidades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha de Vencimiento" />
+
+            <EditText
+                android:id="@+id/editTextUnidades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Ingresar información" />
+
+            <TextView
+                android:id="@+id/textViewTipoPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso" />
+
+            <EditText
+                android:id="@+id/editTextTipoPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Ingresar información" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pollocrudo" />
+
+            <Button
+                android:id="@+id/buttonFotografiar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fotografiar" />
+
+            <Button
+                android:id="@+id/buttonRegistrarAlimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrar" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>
