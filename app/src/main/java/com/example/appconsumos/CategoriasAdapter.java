@@ -38,8 +38,8 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriasAdapter.My
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Categorias pelicula = categoriasList.get(position);
-        holder.desc.setText(pelicula.getDesc_categoria());
+        Categorias categoria = categoriasList.get(position);
+        holder.desc.setText(categoria.getDesc_categoria());
     }
 
     @Override

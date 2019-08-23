@@ -22,7 +22,8 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
-CategoriasFragment.OnFragmentInteractionListener {
+CategoriasFragment.OnFragmentInteractionListener,
+        AlimentosFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,15 +101,16 @@ CategoriasFragment.OnFragmentInteractionListener {
 
         if (id == R.id.nav_home) {
             Log.i("====>","Click en ...CATEGORIAS!!");
-
-            // añadir context de frag1 (CATEGORIAS) a contenedor principal
+            // añadir context de fragment (CATEGORIAS) a contenedor principal
             fragmentManager.beginTransaction().replace(R.id.contenedor,
                     new CategoriasFragment()).commit();
 
         } else if (id == R.id.nav_gallery) {
+            Log.i("====>","Click en ...ALIMENTOS!!");
+            // añadir context de fragment (ALIMENTOS) a contenedor principal
             // Handle the camera action
             fragmentManager.beginTransaction().replace(R.id.contenedor,
-                    new CategoriasFragment()).commit();
+                    new AlimentosFragment()).commit();
 
         } else if (id == R.id.nav_slideshow) {
 

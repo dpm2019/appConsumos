@@ -20,12 +20,12 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link CategoriasFragment.OnFragmentInteractionListener} interface
+ * {@link AlimentosFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link CategoriasFragment#newInstance} factory method to
+ * Use the {@link AlimentosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CategoriasFragment extends Fragment {
+public class AlimentosFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -37,12 +37,7 @@ public class CategoriasFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    //Implementando RecyclerView, es una version mejorada del ListView!
-    private List<Categorias> categoriasList = new ArrayList<>();
-    private RecyclerView recyclerView;
-    private CategoriasAdapter mAdapter;
-
-    public CategoriasFragment() {
+    public AlimentosFragment() {
         // Required empty public constructor
     }
 
@@ -52,17 +47,24 @@ public class CategoriasFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CategoriasFragment.
+     * @return A new instance of fragment AlimentosFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CategoriasFragment newInstance(String param1, String param2) {
-        CategoriasFragment fragment = new CategoriasFragment();
+    public static AlimentosFragment newInstance(String param1, String param2) {
+        AlimentosFragment fragment = new AlimentosFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
+
+
+    //Implementando RecyclerView, es una version mejorada del ListView!
+    private List<Alimentos> alimentosList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private AlimentosAdapter mAdapter;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,50 +79,47 @@ public class CategoriasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View categoriaView = inflater.inflate(R.layout.fragment_categorias, container, false);
+        View alimentoView = inflater.inflate(R.layout.fragment_alimentos, container, false);
 
         //Implementando RecyclerView, es una version mejorada del ListView!
-        recyclerView = (RecyclerView) categoriaView.findViewById(R.id.recycler_view_categorias);
+        recyclerView = (RecyclerView) alimentoView.findViewById(R.id.recycler_view_alimentos);
 
         //El adapter debe estar creado desde antes para ser invocado
-        mAdapter = new CategoriasAdapter(categoriasList);
+        mAdapter = new AlimentosAdapter(alimentosList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         //recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
-        prepareCategoriaData();
+        prepareAlimentosData();
 
-        return categoriaView;
+        return alimentoView;
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_fragmento1, container, false);
     }
 
-    private void prepareCategoriaData() {
-        Categorias categoria = new Categorias("1","Carnes");
-        categoriasList.add(categoria);
+    private void prepareAlimentosData() {
+        Alimentos alimento = new Alimentos("1","pollo entero","18/01/2019", "carnes","2","kg","null","vigente");
+        alimentosList.add(alimento);
 
-        categoria = new Categorias("2","Frutas");
-        categoriasList.add(categoria);
+        alimento = new Alimentos("2","medallones de lomito","18/01/2019", "carnes","2","kg","null","vigente");
+        alimentosList.add(alimento);
 
-        categoria = new Categorias("3","Bebidas");
-        categoriasList.add(categoria);
+        alimento = new Alimentos("3","Alitas de Pollo","18/01/2019", "carnes","2","kg","null","vigente");
+        alimentosList.add(alimento);
 
-        categoria = new Categorias("4","Vegetales");
-        categoriasList.add(categoria);
+        alimento = new Alimentos("4","Chuletas de Cerdo","18/01/2019", "carnes","2","kg","null","vigente");
+        alimentosList.add(alimento);
 
-        categoria = new Categorias("5","Lacteos");
-        categoriasList.add(categoria);
+        alimento = new Alimentos("5","Menudencia de pollo","18/01/2019", "carnes","2","kg","null","vigente");
+        alimentosList.add(alimento);
 
-        categoria = new Categorias("6","Pescados y Mariscos");
-        categoriasList.add(categoria);
-
-        categoria = new Categorias("7","Otros");
-        categoriasList.add(categoria);
-
+        alimento = new Alimentos("6","churrasco","18/01/2019", "carnes","2","kg","null","vigente");
+        alimentosList.add(alimento);
 
         mAdapter.notifyDataSetChanged();
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
