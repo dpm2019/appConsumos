@@ -8,21 +8,12 @@
     android:focusable="true">
 
     <TextView
-        android:id="@+id/descalimento"
+        android:id="@+id/descsupermercado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
         android:textSize="16dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/unidalimento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/estalimento"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 </LinearLayout>

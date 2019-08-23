@@ -1,5 +1,6 @@
 package com.example.appconsumos;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +26,8 @@ public class NavigationDrawerActivity extends AppCompatActivity
         CategoriasFragment.OnFragmentInteractionListener,
         AlimentosFragment.OnFragmentInteractionListener,
         NuevoAlimentoFragment.OnFragmentInteractionListener,
-        NotificacionesFragment.OnFragmentInteractionListener{
+        NotificacionesFragment.OnFragmentInteractionListener,
+        SupermercadosFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,9 +131,19 @@ public class NavigationDrawerActivity extends AppCompatActivity
                     new NotificacionesFragment()).commit();
 
         } else if (id == R.id.nav_share) {
+            Log.i("====>","Click en ...CONTACTAR SUPERMERCADO!!");
+            // añadir context de fragment (CONTACTAR SUPERMERCADO) a contenedor principal
+            // Handle the camera action
+            fragmentManager.beginTransaction().replace(R.id.contenedor,
+                    new SupermercadosFragment()).commit();
 
         } else if (id == R.id.nav_send) {
+            Log.i("====>","Click en ...CERRAR SESION!!");
+            //Intent k = new Intent(this, CategoriasActivity.class);
+            Intent k = new Intent(this, LoginActivity.class);
+            startActivity(k);
 
+            return true;
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

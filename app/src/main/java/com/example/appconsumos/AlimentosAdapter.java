@@ -1,13 +1,13 @@
 package com.example.appconsumos;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.TextView;
 
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+        import java.util.List;
 
 public class AlimentosAdapter extends RecyclerView.Adapter<AlimentosAdapter.MyViewHolder> {
 
@@ -15,11 +15,14 @@ public class AlimentosAdapter extends RecyclerView.Adapter<AlimentosAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView id, desc;
+        public TextView id, desc, unidad, estado;
 
         public MyViewHolder(View view) {
             super(view);
             desc = (TextView) view.findViewById(R.id.descalimento);
+            unidad = (TextView) view.findViewById(R.id.unidalimento);
+            estado = (TextView) view.findViewById(R.id.estalimento);
+
         }
     }
 
@@ -41,6 +44,8 @@ public class AlimentosAdapter extends RecyclerView.Adapter<AlimentosAdapter.MyVi
     public void onBindViewHolder(AlimentosAdapter.MyViewHolder holder, int position) {
         Alimentos alimento = alimentosList.get(position);
         holder.desc.setText(alimento.getDesc_alimento());
+        holder.unidad.setText(alimento.getUnidades());
+        holder.estado.setText(alimento.getEstado());
     }
 
     @Override

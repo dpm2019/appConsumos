@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:onClick="cargarCategorias"
-        android:text="Iniciar Sesión"
+        android:text="Iniciar Sesión con Google"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

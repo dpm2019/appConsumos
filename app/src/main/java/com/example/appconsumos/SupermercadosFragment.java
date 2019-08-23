@@ -20,12 +20,12 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link AlimentosFragment.OnFragmentInteractionListener} interface
+ * {@link SupermercadosFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link AlimentosFragment#newInstance} factory method to
+ * Use the {@link SupermercadosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AlimentosFragment extends Fragment {
+public class SupermercadosFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -37,7 +37,7 @@ public class AlimentosFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public AlimentosFragment() {
+    public SupermercadosFragment() {
         // Required empty public constructor
     }
 
@@ -47,11 +47,11 @@ public class AlimentosFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment AlimentosFragment.
+     * @return A new instance of fragment SupermercadosFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static AlimentosFragment newInstance(String param1, String param2) {
-        AlimentosFragment fragment = new AlimentosFragment();
+    public static SupermercadosFragment newInstance(String param1, String param2) {
+        SupermercadosFragment fragment = new SupermercadosFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,11 +59,10 @@ public class AlimentosFragment extends Fragment {
         return fragment;
     }
 
-
     //Implementando RecyclerView, es una version mejorada del ListView!
-    private List<Alimentos> alimentosList = new ArrayList<>();
+    private List<Supermercados> supermercadosList = new ArrayList<>();
     private RecyclerView recyclerView;
-    private AlimentosAdapter mAdapter;
+    private SupermercadosAdapter mAdapter;
 
 
     @Override
@@ -79,47 +78,40 @@ public class AlimentosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View alimentoView = inflater.inflate(R.layout.fragment_alimentos, container, false);
+        View alimentoView = inflater.inflate(R.layout.fragment_contactar_supermercado, container, false);
 
         //Implementando RecyclerView, es una version mejorada del ListView!
-        recyclerView = (RecyclerView) alimentoView.findViewById(R.id.recycler_view_alimentos);
+        recyclerView = (RecyclerView) alimentoView.findViewById(R.id.recycler_view_contactsupmercados);
 
         //El adapter debe estar creado desde antes para ser invocado
-        mAdapter = new AlimentosAdapter(alimentosList);
+        mAdapter = new SupermercadosAdapter(supermercadosList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         //recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
-        prepareAlimentosData();
+        prepareSMercadosData();
 
         return alimentoView;
-        // Inflate the layout for this fragment
-        //return inflater.inflate(R.layout.fragment_fragmento1, container, false);
     }
 
-    private void prepareAlimentosData() {
-        Alimentos alimento = new Alimentos("1","pollo entero","18/01/2019", "carnes","unidades: 2","kg","null","60 días por vencer");
-        alimentosList.add(alimento);
 
-        alimento = new Alimentos("2","medallones de lomito","18/01/2019", "carnes","unidades: 2","kg","null","14 días por vencer");
-        alimentosList.add(alimento);
+    private void prepareSMercadosData() {
+        Supermercados smercado = new Supermercados("1","Tottus - San Miguel");
+        supermercadosList.add(smercado);
 
-        alimento = new Alimentos("3","Alitas de Pollo","18/01/2019", "carnes","unidades: 2","kg","null","5 días por vencer");
-        alimentosList.add(alimento);
+        smercado = new Supermercados("2","Tottus - San Isidro");
+        supermercadosList.add(smercado);
 
-        alimento = new Alimentos("4","Chuletas de Cerdo","18/01/2019", "carnes","unidades: 2","kg","null","3 días por vencer");
-        alimentosList.add(alimento);
+        smercado = new Supermercados("3","Plaza Vea - Barranco");
+        supermercadosList.add(smercado);
 
-        alimento = new Alimentos("5","Menudencia de pollo","18/01/2019", "carnes","unidades: 2","kg","null","7 días por vencer");
-        alimentosList.add(alimento);
+        smercado = new Supermercados("4","Plaza Vea - San Isidro");
+        supermercadosList.add(smercado);
 
-        alimento = new Alimentos("6","churrasco","18/01/2019", "carnes","unidades: 2","kg","null","60 días por vencer");
-        alimentosList.add(alimento);
 
         mAdapter.notifyDataSetChanged();
     }
-
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
