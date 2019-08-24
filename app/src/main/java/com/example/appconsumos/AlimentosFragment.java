@@ -1,10 +1,12 @@
 package com.example.appconsumos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -98,6 +101,21 @@ public class AlimentosFragment extends Fragment {
         recyclerView.setAdapter(mAdapter);
         prepareAlimentosData();
 
+        //añadir acciones al boton, para salto de fragmento alimentos a fragmento registro de nuevos alimentos
+        Button btnIrNuevoAlimento = (Button) alimentoView.findViewById(R.id.buttonirNuevoAlimento);
+        btnIrNuevoAlimento.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // do something
+                FragmentTransaction ft = getFragmentManager().beginTransaction();
+                Log.i("====>","Click en ...boton NUEVO!!");
+                ft.replace(R.id.contenedor, new NuevoAlimentoFragment());
+                ft.commit();
+            }
+        });
+
         return alimentoView;
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_fragmento1, container, false);
@@ -150,6 +168,8 @@ public class AlimentosFragment extends Fragment {
         mListener = null;
     }
 
+
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -190,5 +210,4 @@ public class AlimentosFragment extends Fragment {
         return super.onContextItemSelected(item);
 
     }
-
 }

@@ -11,9 +11,28 @@
          android:layout_height="match_parent"
          android:text="@string/hello_blank_fragment" /> -->
 
-     <androidx.recyclerview.widget.RecyclerView
-         android:id="@+id/recycler_view_alimentos"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
- </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_alimentos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/buttonirNuevoAlimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nuevo" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
