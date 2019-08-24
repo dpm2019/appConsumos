@@ -5,13 +5,18 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -159,4 +164,31 @@ public class AlimentosFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        ///
+        ///
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        switch (item.getItemId()){
+
+            case 121:
+                Log.i("====>","Click en ...121!!");
+                ft.replace(R.id.contenedor, new NuevoAlimentoFragment());
+                ft.commit();
+                return true;
+            case 122:
+                Log.i("====>","Click en ...122!!");
+                ft.replace(R.id.contenedor, new NuevoAlimentoFragment());
+                ft.commit();
+                return true;
+        }
+
+        return super.onContextItemSelected(item);
+
+    }
+
 }
