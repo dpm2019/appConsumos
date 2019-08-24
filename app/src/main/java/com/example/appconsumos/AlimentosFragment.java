@@ -188,21 +188,17 @@ public class AlimentosFragment extends Fragment {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
 
-        ///
-        ///
-
         FragmentTransaction ft = getFragmentManager().beginTransaction();
 
         switch (item.getItemId()){
-
-            case 121:
-                Log.i("====>","Click en ...121!!");
-                ft.replace(R.id.contenedor, new NuevoAlimentoFragment());
+            case 100:
+                Log.i("====>","Click en ...RENOVAR ALIMENTO!!");
+                ft.replace(R.id.contenedor, new RenovarAlimentoFragment());
                 ft.commit();
                 return true;
-            case 122:
-                Log.i("====>","Click en ...122!!");
-                ft.replace(R.id.contenedor, new NuevoAlimentoFragment());
+            case 101:
+                Log.i("====>","Click en ...ELIMINAR ALIMENTO!!");
+                ft.replace(R.id.contenedor, new EliminarAlimentoFragment());
                 ft.commit();
                 return true;
         }

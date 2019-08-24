@@ -27,7 +27,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
         AlimentosFragment.OnFragmentInteractionListener,
         NuevoAlimentoFragment.OnFragmentInteractionListener,
         NotificacionesFragment.OnFragmentInteractionListener,
-        SupermercadosFragment.OnFragmentInteractionListener{
+        SupermercadosFragment.OnFragmentInteractionListener,
+        RenovarAlimentoFragment.OnFragmentInteractionListener,
+        EliminarAlimentoFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
