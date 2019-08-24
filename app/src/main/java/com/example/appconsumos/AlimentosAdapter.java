@@ -33,7 +33,7 @@ public class AlimentosAdapter extends RecyclerView.Adapter<AlimentosAdapter.MyVi
         public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
 
             contextMenu.setHeaderTitle("Selecciona una opción...");
-            contextMenu.add(this.getAdapterPosition(),100,0,"Modificar");
+            contextMenu.add(this.getAdapterPosition(),100,0,"Renovar");
             contextMenu.add(this.getAdapterPosition(),101,0,"Eliminar");
 
         }

@@ -5,11 +5,14 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -78,10 +81,10 @@ public class SupermercadosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View alimentoView = inflater.inflate(R.layout.fragment_contactar_supermercado, container, false);
+        View alimentoView = inflater.inflate(R.layout.fragment_supermercados, container, false);
 
         //Implementando RecyclerView, es una version mejorada del ListView!
-        recyclerView = (RecyclerView) alimentoView.findViewById(R.id.recycler_view_contactsupmercados);
+        recyclerView = (RecyclerView) alimentoView.findViewById(R.id.recycler_view_supmercados);
 
         //El adapter debe estar creado desde antes para ser invocado
         mAdapter = new SupermercadosAdapter(supermercadosList);
@@ -150,5 +153,28 @@ public class SupermercadosFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    //la funcion de este metodo es que este fragmento invoque otros en la navegación
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        switch (item.getItemId()){
+            case 200:
+                Log.i("====>","Click en ...call!!");
+                ft.replace(R.id.contenedor, new RenovarAlimentoFragment());
+                ft.commit();
+                return true;
+            case 201:
+                Log.i("====>","Click en ...Maps!!");
+                ft.replace(R.id.contenedor, new EliminarAlimentoFragment());
+                ft.commit();
+                return true;
+        }
+
+        return super.onContextItemSelected(item);
+
     }
 }

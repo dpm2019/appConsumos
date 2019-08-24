@@ -46,9 +46,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
             }
         });
 
+        // añadir fragment (CATEGORIAS) a contenedor principal
         FragmentManager fragmentManager = getSupportFragmentManager();
         Log.i("====>","Click en ...CATEGORIAS!!");
-        // añadir context de fragment (CATEGORIAS) a contenedor principal
         fragmentManager.beginTransaction().replace(R.id.contenedor,
                 new CategoriasFragment()).commit();
 
