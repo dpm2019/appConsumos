@@ -45,6 +45,13 @@ public class NavigationDrawerActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Log.i("====>","Click en ...CATEGORIAS!!");
+        // añadir context de fragment (CATEGORIAS) a contenedor principal
+        fragmentManager.beginTransaction().replace(R.id.contenedor,
+                new CategoriasFragment()).commit();
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
