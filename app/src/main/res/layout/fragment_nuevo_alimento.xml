@@ -104,13 +104,13 @@
 
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageViewFotoNuevoAlimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/pollocrudo" />
 
             <Button
-                android:id="@+id/buttonFotografiar"
+                android:id="@+id/buttonFotoNuevoAlimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fotografiar" />
