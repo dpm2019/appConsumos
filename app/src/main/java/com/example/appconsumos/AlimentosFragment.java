@@ -33,7 +33,7 @@ import java.util.List;
  * Use the {@link AlimentosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AlimentosFragment extends Fragment {
+public class AlimentosFragment extends Fragment implements AlimentosAdapter.OnAlimentosListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -93,7 +93,7 @@ public class AlimentosFragment extends Fragment {
         recyclerView = (RecyclerView) alimentoView.findViewById(R.id.recycler_view_alimentos);
 
         //El adapter debe estar creado desde antes para ser invocado
-        mAdapter = new AlimentosAdapter(alimentosList);
+        mAdapter = new AlimentosAdapter(alimentosList, this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -168,6 +168,15 @@ public class AlimentosFragment extends Fragment {
         mListener = null;
     }
 
+    @Override
+    public void onAlimentosClick(int position) {
+        //alimentosList.get(position);
+        /*FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        Log.i("====>","Click en ...ALIMENTOS FRAGMENT!!" + position);
+        ft.replace(R.id.contenedor, new RenovarAlimentoFragment());
+        ft.commit();*/
+    }
 
 
     /**

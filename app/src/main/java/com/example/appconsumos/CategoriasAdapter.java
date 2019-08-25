@@ -1,5 +1,6 @@
 package com.example.appconsumos;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,20 +13,37 @@ import java.util.List;
 public class CategoriasAdapter extends RecyclerView.Adapter<CategoriasAdapter.MyViewHolder> {
 
     private List<Categorias> categoriasList;
+    OnCategoriasListener mOnCategoriasListener;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder
+            implements View.OnClickListener {
 
         public TextView id, desc;
+        OnCategoriasListener onCategoriasListener;
 
-        public MyViewHolder(View view) {
+        public MyViewHolder(View view, OnCategoriasListener onCategoriasListener) {
             super(view);
             desc = (TextView) view.findViewById(R.id.desccategoria);
+
+            //integrar interface Listener (paso 2)
+            this.onCategoriasListener = onCategoriasListener;
+            view.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            //integrar Listener en evento OnClick(paso 3)
+            Log.i("====>","Click en ...CATEGORIAS POSITION ADAPTER!!" + getAdapterPosition());
+            onCategoriasListener.onCategoriasClick(getAdapterPosition());
         }
     }
 
 
-    public CategoriasAdapter(List<Categorias> categoriasList) {
+    public CategoriasAdapter(List<Categorias> categoriasList, OnCategoriasListener onCategoriasListener) {
         this.categoriasList = categoriasList;
+        //integrar en constructor uso de Listener(paso 4)
+        this.mOnCategoriasListener = onCategoriasListener;
+
     }
 
     @Override
@@ -33,7 +51,9 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriasAdapter.My
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.categorias_fila, parent, false);
 
-        return new MyViewHolder(itemView);
+        //integrar listener global (paso 5)
+        //finalmente ir al fragment para implementar el llamado del listener onClick
+        return new MyViewHolder(itemView, mOnCategoriasListener);
     }
 
     @Override
@@ -46,4 +66,10 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriasAdapter.My
     public int getItemCount() {
         return categoriasList.size();
     }
+
+    //crear interface Listener, onClick, en Recycler Adapter (paso 1)
+    public interface OnCategoriasListener{
+        void onCategoriasClick(int position);
+    }
+
 }

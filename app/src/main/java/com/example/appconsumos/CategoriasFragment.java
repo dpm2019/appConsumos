@@ -5,10 +5,12 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +27,7 @@ import java.util.List;
  * Use the {@link CategoriasFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CategoriasFragment extends Fragment {
+public class CategoriasFragment extends Fragment implements CategoriasAdapter.OnCategoriasListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -83,7 +85,7 @@ public class CategoriasFragment extends Fragment {
         recyclerView = (RecyclerView) categoriaView.findViewById(R.id.recycler_view_categorias);
 
         //El adapter debe estar creado desde antes para ser invocado
-        mAdapter = new CategoriasAdapter(categoriasList);
+        mAdapter = new CategoriasAdapter(categoriasList, this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -144,6 +146,16 @@ public class CategoriasFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onCategoriasClick(int position) {
+        //alimentosList.get(position);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+
+        Log.i("====>","Click en ...CATEGORIAS FRAGMENT!!" + position);
+        ft.replace(R.id.contenedor, new AlimentosFragment());
+        ft.commit();
     }
 
     /**
