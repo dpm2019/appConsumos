@@ -72,4 +72,10 @@ public class CategoriasAdapter extends RecyclerView.Adapter<CategoriasAdapter.My
         void onCategoriasClick(int position);
     }
 
+    public void setFilter(List<Categorias> newsArrayList) {
+        categoriasList.clear();
+        categoriasList.addAll(newsArrayList);
+        notifyDataSetChanged();
+    }
+
 }

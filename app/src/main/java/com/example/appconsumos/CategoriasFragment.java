@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -12,8 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +34,12 @@ import java.util.List;
  * Use the {@link CategoriasFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CategoriasFragment extends Fragment implements CategoriasAdapter.OnCategoriasListener{
+public class CategoriasFragment extends Fragment
+        implements CategoriasAdapter.OnCategoriasListener,
+        SearchView.OnQueryTextListener
+        //activar solo si se desa cambiar expansion de searchview
+        //,MenuItem.OnActionExpandListener
+        {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -43,6 +55,8 @@ public class CategoriasFragment extends Fragment implements CategoriasAdapter.On
     private List<Categorias> categoriasList = new ArrayList<>();
     private RecyclerView recyclerView;
     private CategoriasAdapter mAdapter;
+
+    SearchView categoriasSearchView;
 
     public CategoriasFragment() {
         // Required empty public constructor
@@ -75,6 +89,7 @@ public class CategoriasFragment extends Fragment implements CategoriasAdapter.On
         }
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -92,6 +107,9 @@ public class CategoriasFragment extends Fragment implements CategoriasAdapter.On
         //recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(mAdapter);
         prepareCategoriaData();
+
+        //activar funciones de menu (paso 1)
+        setHasOptionsMenu(true);
 
         return categoriaView;
         // Inflate the layout for this fragment
@@ -157,6 +175,67 @@ public class CategoriasFragment extends Fragment implements CategoriasAdapter.On
         ft.replace(R.id.contenedor, new AlimentosFragment());
         ft.commit();
     }
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //inflater.inflate(R.menu.main, menu); validar si se vuelve activar en el fragment
+        // Associate searchable configuration with the SearchView
+        final MenuItem searchItem = menu.findItem(R.id.id_bar_search_alimento);
+        //MenuItemCompat.setShowAsAction(searchItem, MenuItemCompat.SHOW_AS_ACTION_ALWAYS | MenuItemCompat.SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW);
+        categoriasSearchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        categoriasSearchView.setOnQueryTextListener(this);
+
+        int searchSrcTextId = getResources().getIdentifier("android:id/search_src_text", null, null);
+        EditText searchEditText = (EditText) categoriasSearchView.findViewById(searchSrcTextId);
+        searchEditText.setHint("Buscar Categorías");
+
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+    /* validar si se vuelva a activar en el fragment
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return true;
+    }*/
+
+    @Override
+    public boolean onQueryTextSubmit(String newText) {
+        return true;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+
+        if (newText == null || newText.trim().isEmpty()) {
+            mAdapter.setFilter(categoriasList);
+            Log.i("====>","onQueryTextChange Categorias (null):!!"+newText);
+            prepareCategoriaData();
+            return false;
+        }
+        newText = newText.toLowerCase();
+        final ArrayList<Categorias> filteredNewsList = new ArrayList<>();
+        for (Categorias model : categoriasList) {
+            final String title = model.getDesc_categoria().toLowerCase();
+            /*final String author = model.getAuthor().toLowerCase();
+            final String category = model.getCategory().toLowerCase();
+            final String content = model.getContent().toLowerCase();*/
+            if ((title.contains(newText)) /*|| (author.contains(newText)) || (category.contains(newText)) || (content.contains(newText))*/) {
+                filteredNewsList.add(model);
+            }
+        }
+        mAdapter.setFilter(filteredNewsList);
+        return true;
+    }
+    //validar uso luego de activar implement:MenuItem.OnActionExpandListener:
+    /*
+    @Override
+    public boolean onMenuItemActionExpand(MenuItem menuItem) {
+        return true;
+    }
+
+    @Override
+    public boolean onMenuItemActionCollapse(MenuItem menuItem) {
+        mAdapter.setFilter(categoriasList);
+        return true;
+    }*/
 
     /**
      * This interface must be implemented by activities that contain this

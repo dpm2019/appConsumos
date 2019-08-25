@@ -7,10 +7,6 @@
     android:clickable="true"
     android:focusable="true"
     android:id="@+id/alimentoLinearLayout">
-        <TextView
-            android:id="@+id/unidalimento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/descalimento"
@@ -19,6 +15,11 @@
             android:textColor="@color/colorPrimary"
             android:textSize="16dp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/unidalimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/estalimento"

@@ -71,21 +71,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="date"
                 android:hint="Ingresar información" />
 
             <TextView
                 android:id="@+id/textViewUnidades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fecha de Vencimiento" />
+                android:text="Unidades" />
 
             <EditText
                 android:id="@+id/editTextUnidades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:hint="Ingresar información" />
 
             <TextView
