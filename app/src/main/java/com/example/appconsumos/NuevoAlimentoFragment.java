@@ -16,7 +16,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 
 /**
@@ -90,6 +92,23 @@ public class NuevoAlimentoFragment extends Fragment {
                 tomarFotoIntent();
             }
         });
+
+        final EditText txtDescAlimento = (EditText) nuevoAlimentoView.findViewById(R.id.editTextDescAlimento);
+        Button btnRegistrarAlimento = (Button) nuevoAlimentoView.findViewById(R.id.buttonRegistrarAlimento);
+        btnRegistrarAlimento.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // do something
+                Log.i("====>","Click en ...boton REGISTRAR!!");
+                if(txtDescAlimento.getText().toString().isEmpty()){
+                    Toast.makeText  (getContext(), "Ingrese el nombre del alimento",
+                            Toast.LENGTH_LONG).show();                }
+
+            }
+        });
+
         // Inflate the layout for this fragment
         return nuevoAlimentoView;
     }
