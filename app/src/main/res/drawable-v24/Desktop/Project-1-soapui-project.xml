@@ -1,0 +1,2944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fc962cce-9498-45c7-b273-67a2d93617b1" activeEnvironment="Default" name="Project 1" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="afa4e01e-a44d-4e86-8c4d-563529ccf111" wsaVersion="NONE" name="GetCustomerInfo_SOAP12Binding" type="wsdl" bindingName="{http://www.entel.cl/ESC/GetCustomerInfo/v1}GetCustomerInfo_SOAP12Binding" soapVersion="1_2" anonymous="optional" definition="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?wsdl"><con:part><con:url>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions targetNamespace="http://www.entel.cl/ESC/GetCustomerInfo/v1" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.entel.cl/EBM/GetCustomerInfo/v1" xmlns:WL5G3N2="http://www.entel.cl/ESC/GetCustomerInfo/v1" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <WL5G3N0:types>
+    <xs:schema xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ebmns="http://www.entel.cl/EBM/GetCustomerInfo/v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://www.entel.cl/ESC/GetCustomerInfo/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.entel.cl/EBM/GetCustomerInfo/v1" schemaLocation="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FGetCustomerInfo_v1_EBM"/>
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="GetCustomerInfo_Message_In">
+    <WL5G3N0:part element="WL5G3N1:GetCustomerInfo_REQ" name="In"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="GetCustomerInfo_Message_Out">
+    <WL5G3N0:part element="WL5G3N1:GetCustomerInfo_RSP" name="Out"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="GetCustomerInfo_Message_Fault">
+    <WL5G3N0:part element="WL5G3N1:GetCustomerInfo_FRSP" name="Fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="GetCustomerInfo_PortType">
+    <WL5G3N0:operation name="GetCustomerInfo">
+      <WL5G3N0:input message="WL5G3N2:GetCustomerInfo_Message_In"/>
+      <WL5G3N0:output message="WL5G3N2:GetCustomerInfo_Message_Out"/>
+      <WL5G3N0:fault message="WL5G3N2:GetCustomerInfo_Message_Fault" name="DefaultFault"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="GetCustomerInfo_SOAP12Binding" type="WL5G3N2:GetCustomerInfo_PortType">
+    <WL5G3N3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="GetCustomerInfo">
+      <WL5G3N3:operation soapAction="http://www.entel.cl/EBM/GetCustomerInfo/v1"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="DefaultFault">
+        <WL5G3N3:fault name="DefaultFault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="GetCustomerInfo_SOAP12BindingQSService">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N2:GetCustomerInfo_SOAP12Binding" name="GetCustomerInfo_SOAP12BindingQSPort">
+      <WL5G3N3:address location="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FGetCustomerInfo_v1_EBM</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://www.entel.cl/EBM/GetCustomerInfo/v1" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:esons_header="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:tns="http://www.entel.cl/EBM/GetCustomerInfo/v1">
+  <xs:import namespace="http://www.entel.cl/ESO/MessageHeader/v1" schemaLocation="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FMessageHeader_v1_ESO"/>
+  <xs:element name="GetCustomerInfo_REQ" type="tns:GetCustomerInfo_REQ_Type"/>
+  <xs:complexType name="GetCustomerInfo_REQ_Type">
+    <xs:sequence>
+      <xs:element ref="esons_header:RequestHeader"/>
+      <xs:element name="Body">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CustomerAccount">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="Asset">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="MSISDN">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="SN" type="xs:string"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="Individual">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="IndividualIdentification">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="number" type="xs:string"/>
+                              <xs:element name="type" type="xs:string"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCustomerInfo_RSP" type="tns:GetCustomerInfo_RSP_Type"/>
+  <xs:complexType name="GetCustomerInfo_RSP_Type">
+    <xs:sequence>
+      <xs:element ref="esons_header:ResponseHeader"/>
+      <xs:element name="Body">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerAccount">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Asset">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="MSISDN">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="SN" type="xs:string"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element minOccurs="0" name="Contract">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element minOccurs="0" name="ID" type="xs:string"/>
+                              <xs:element minOccurs="0" name="planType" type="xs:string"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                        <xs:element name="Resource">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="ID" type="xs:string"/>
+                              <xs:element name="resourceType" type="xs:string"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="BillingAccount">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="externalID" type="xs:string"/>
+                        <xs:element minOccurs="0" name="billingAccountCode" type="xs:string"/>
+                        <xs:element minOccurs="0" name="status" type="xs:string"/>
+                        <xs:element minOccurs="0" name="statusChangeDate" type="xs:dateTime"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element name="Individual">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element name="IndividualIdentification">
+                          <xs:complexType>
+                            <xs:sequence>
+                              <xs:element name="number" type="xs:string"/>
+                              <xs:element name="type" type="xs:string"/>
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                  <xs:element minOccurs="0" name="Migration">
+                    <xs:complexType>
+                      <xs:sequence>
+                        <xs:element minOccurs="0" name="batchID" type="xs:string"/>
+                      </xs:sequence>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetCustomerInfo_FRSP" type="tns:GetCustomerInfo_FRSP_Type"/>
+  <xs:complexType name="GetCustomerInfo_FRSP_Type">
+    <xs:sequence>
+      <xs:element ref="esons_header:ResponseHeader"/>
+      <xs:element name="Body">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FMessageHeader_v1_ESO</con:url><con:content><![CDATA[<!--Ref ESO template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/ESO/MessageHeader/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:esons_result="http://www.entel.cl/ESO/Result/v2" xmlns:esons_error="http://www.entel.cl/ESO/Error/v1" xmlns:eddns_dictionary="http://www.entel.cl/EDD/Dictionary/v1">
+  <import namespace="http://www.entel.cl/EDD/Dictionary/v1" schemaLocation="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FDictionary_v1_EDD"/>
+  <annotation>
+    <documentation>Data structures representing metadata related to a certain Service Operation
+			Execution.</documentation>
+  </annotation>
+  <import namespace="http://www.entel.cl/ESO/Result/v2" schemaLocation="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FResult_v2_ESO"/>
+  <complexType name="MessageHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the execution of a certain
+				service operation, during its original request, propagation and final response.</documentation>
+    </annotation>
+    <sequence>
+      <element ref="tns:Consumer"/>
+      <element ref="tns:Trace"/>
+      <element ref="tns:Channel" minOccurs="0"/>
+    </sequence>
+  </complexType>
+  <complexType name="Consumer_Type">
+    <annotation>
+      <documentation>Information about the Service Consumer.</documentation>
+    </annotation>
+    <attribute name="sysCode" type="eddns_dictionary:sysCode_SType" use="required">
+      <annotation>
+        <documentation>Unique System Code. Represents the service consumer.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="enterpriseCode" type="eddns_dictionary:sysCode_SType" use="required">
+      <annotation>
+        <documentation>Unique Enterprise Code. Represents the enterprise service consumer.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="countryCode" type="eddns_dictionary:countryCode_SType" use="required">
+      <annotation>
+        <documentation>Unique Country Code. Represents the Country from which the execution
+					was made.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="Trace_Type">
+    <annotation>
+      <documentation>Meta-Information related to traceability, which uniquely identifies this
+				particular execution.</documentation>
+    </annotation>
+    <sequence>
+      <element ref="tns:Service" minOccurs="0">
+        <annotation>
+          <documentation>Service that holds the control of the execution. This is
+						expected to change each time a Service becomes statefull.</documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="clientReqTimestamp" use="required" type="eddns_dictionary:messageTimeStamp_SType">
+      <annotation>
+        <documentation>Represents the exact date-time when the consumer/client sent the
+					message to the Service. This should be sent by Service Consumer, and never
+					changed by the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="reqTimestamp" type="eddns_dictionary:messageTimeStamp_SType">
+      <annotation>
+        <documentation>Represents the date-time when the request was taken by the Service.
+					This should not be sent by a Service Consumer, but populated by the Requested
+					Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="rspTimestamp" type="eddns_dictionary:messageTimeStamp_SType">
+      <annotation>
+        <documentation>Represents the date-time when the response was delivered by the
+					Service. This should not be sent by a Service Consumer, but populated by the
+					Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="processID" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Unique process execution instance identifier. This should be sent by
+					a Service Consumer, and never changed on the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="eventID" use="required" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Unique event execution instance identifier. This should be sent by a
+					Service Consumer, and never changed on the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="sourceID" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Another level of detail to be used on-demand by service consumers,
+					in compliance with any propouse they may see fit in each case. It should be sent
+					by a Service Consumer, and never changed on the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="correlationEventID" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Unique EventyID correlation identifier, used to relate one execution
+					to another. It should be sent by a Service Consumer, and never changed on the
+					Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="conversationID" type="tns:conversationID_SType">
+      <annotation>
+        <documentation>Unique correlation identifier, used to relate one execution to
+					another. This should not be polulated by consumer, it is for internal use only.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="correlationID" type="tns:conversationID_SType">
+      <annotation>
+        <documentation>Unique correlation identifier, used to relate one excecution to
+					another. This should not be polulated by consumer, it is for internal use only.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <simpleType name="conversationID_SType">
+    <annotation>
+      <documentation>Unique correlation identifier, used to relate one excecution to another.
+				This should not be polulated by consumer, it is for internal use only.</documentation>
+    </annotation>
+    <restriction base="string"/>
+  </simpleType>
+  <complexType name="Channel_Type">
+    <annotation>
+      <documentation>It holds information about which channel is being used.</documentation>
+    </annotation>
+    <attribute name="name">
+      <annotation>
+        <documentation>Unique Channel Code. Represents the channel being used.</documentation>
+      </annotation>
+      <simpleType>
+        <restriction base="eddns_dictionary:genericStringValue_SType"/>
+      </simpleType>
+    </attribute>
+    <attribute name="mode">
+      <annotation>
+        <documentation>Unique channel Mode. Represents the mode on which the channel is
+					being used.</documentation>
+      </annotation>
+      <simpleType>
+        <restriction base="eddns_dictionary:genericStringValue_SType"/>
+      </simpleType>
+    </attribute>
+  </complexType>
+  <complexType name="Country_Type">
+    <annotation>
+      <documentation>Country from which a certain Service Operation is requested.</documentation>
+    </annotation>
+    <attribute name="code" type="int" use="required">
+      <annotation>
+        <documentation>Unique Country Code. Represents the Country from which the execution
+					was made.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="name" type="string">
+      <annotation>
+        <documentation>Name of the Country.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="Service_Type">
+    <annotation>
+      <documentation>Meta-Information about a Service, during a certain operation
+				execution.</documentation>
+    </annotation>
+    <attribute name="code" type="string">
+      <annotation>
+        <documentation>Unique Service Code. Represents the Service being requested. This
+					should not be sent by a Service Consumer, but populated by the Requested
+					Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="name" type="string">
+      <annotation>
+        <documentation>Name of the Service Being Requested. This should not be sent by a
+					Service Consumer, but populated by the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="operation" type="string">
+      <annotation>
+        <documentation>Name of the Operation being requested for the Service. This should
+					not be sent by a Service Consumer, but populated by the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="RequestHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the execution of a certain
+				service operation, during its request.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:MessageHeader_Type">
+        <sequence>
+          <element ref="esons_result:Result" minOccurs="0">
+            <annotation>
+              <documentation>Result information associated with a Service
+								request.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ResponseHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the execution of a certain
+				service operation, during its response.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:MessageHeader_Type">
+        <sequence>
+          <element ref="esons_result:Result">
+            <annotation>
+              <documentation>Result information related to this
+								response.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="RequestHeader" type="tns:RequestHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the execution of a certain
+				service operation, during its request.</documentation>
+    </annotation>
+  </element>
+  <element name="ResponseHeader" type="tns:ResponseHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the execution of a certain
+				service operation, during its response.</documentation>
+    </annotation>
+  </element>
+  <element name="Service" type="tns:Service_Type">
+    <annotation>
+      <documentation>Meta-Information about a Service, during a certain operation
+				execution.</documentation>
+    </annotation>
+  </element>
+  <element name="Consumer" type="tns:Consumer_Type"/>
+  <element name="Channel" type="tns:Channel_Type"/>
+  <element name="Trace" type="tns:Trace_Type"/>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FDictionary_v1_EDD</con:url><con:content><![CDATA[<!--Ref EDD template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/EDD/Dictionary/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EDD/Dictionary/v1">
+  <annotation>
+    <documentation>Simple and Basic data Structures, intented to be used across all the Inventory.</documentation>
+  </annotation>
+  <complexType name="SimpleIndexDetail_Type">
+    <annotation>
+      <documentation>It allows the correlation between two things, with a simple framework of modules and subModules. Althought both attributes, 
+				module and subModule, are not correlative to any pre-defined structure or taxonomy, it is assumed that the  subModule 
+				represents a component/attribute/member of the module. The subModule should not be sent if the module is ommitted. 
+				The module can be set without a subModule.</documentation>
+    </annotation>
+    <attribute name="module" type="tns:genericStringValue_SType" use="required"/>
+    <attribute name="subModule" type="tns:genericStringValue_SType"/>
+  </complexType>
+  <complexType name="SimpleEventPlaceHolderDetail_Type">
+    <annotation>
+      <documentation>Minimum detail to be able to identify the place and time of a particular event.</documentation>
+    </annotation>
+    <attribute name="time" type="tns:messageTimeStamp_SType" use="required"/>
+    <attribute name="place" type="tns:genericStringValue_SType" use="required"/>
+  </complexType>
+  <complexType name="StringDataMap_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree, on which a single value is assosiated with a single key for each item. 
+                
+                The value is always of undertermined String type.</documentation>
+    </annotation>
+    <sequence>
+      <element name="Item" type="tns:StringDataMapItem_Type" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="StringDataMapItem_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree item, on which a single value is assosiated with a single key.
+                
+                The value is always of undertermined String type.</documentation>
+    </annotation>
+    <attribute name="key" type="tns:genericStringValue_SType" use="required"/>
+    <attribute name="value" type="tns:genericStringValue_SType" use="required"/>
+  </complexType>
+  <complexType name="GenericDataMap_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree, on which a single value is assosiated with a single key for each item. 
+                
+                The value is of undetermined type.</documentation>
+    </annotation>
+    <sequence>
+      <element name="Item" type="tns:GenericDataMapItem_Type" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="GenericDataMapItem_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree item, on which a single value is assosiated with a single key. 
+                
+                The value is of undetermined type.</documentation>
+    </annotation>
+    <sequence>
+      <element name="Value" type="anyType"/>
+    </sequence>
+    <attribute name="key" type="tns:genericStringValue_SType"/>
+  </complexType>
+  <simpleType name="messageTimeStamp_SType">
+    <annotation>
+      <documentation>Used for identifing a single timestamp of a particular message instance.</documentation>
+    </annotation>
+    <restriction base="dateTime">
+      <pattern value="[0-9]{4}-[01][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-6][0-9].*[0-9]*[0-9]*[0-9]*(Z|((\+|-)([0-1][0-2]|[0-0][0-9]):[0-5][0-9]))"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="sysCode_SType">
+    <annotation>
+      <documentation>Used for univoquely identifing a System, Legacy, Application, etc..</documentation>
+    </annotation>
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="countryCode_SType">
+    <annotation>
+      <documentation>Used for univoquely identifing a country.</documentation>
+    </annotation>
+    <restriction base="string">
+      <length value="3"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="alphaCode_SType">
+    <annotation>
+      <documentation>Alphanumeric code represented by a 3 characters string.</documentation>
+    </annotation>
+    <restriction base="string">
+      <length value="3"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="sysName_SType">
+    <annotation>
+      <documentation>Used for univoquely describing a instance of a System, Legacy, Application, etc.</documentation>
+    </annotation>
+    <restriction base="string">
+      <length value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="genericStringValue_SType">
+    <annotation>
+      <documentation>Simple type used for values on which its representation is an undertermined string chain.</documentation>
+    </annotation>
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="age_SType">
+    <annotation>
+      <documentation>It depicts the age of a person or object.</documentation>
+    </annotation>
+    <restriction base="int"/>
+  </simpleType>
+  <simpleType name="id_SType">
+    <annotation>
+      <documentation>Simple type used for unique identifiers.
+This is represented in the integer base, and could apply the necessary restrictions given its representation.</documentation>
+    </annotation>
+    <restriction base="int"/>
+  </simpleType>
+  <simpleType name="status_SType">
+    <restriction base="string">
+      <enumeration value="OK"/>
+      <enumeration value="ERROR"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="timeout_SType">
+    <annotation>
+      <documentation>Generic Timeout values, made out of int values</documentation>
+    </annotation>
+    <restriction base="int">
+      <!--Define future restrictions here.-->
+    </restriction>
+  </simpleType>
+  <complexType name="Credentials_Type">
+    <annotation>
+      <documentation>Security related information, that allows a Consumer to access a certain service operation.</documentation>
+    </annotation>
+    <attribute name="user" type="string">
+      <annotation>
+        <documentation>The username being used for executing this service. Its mainly used for Security Constraints Validations.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="password" type="string">
+      <annotation>
+        <documentation>The password being used for executing this service. Its mainly used for Security Constraints Validations.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="CacheKey_Type">
+    <annotation>
+      <documentation>Key used to store cached values.</documentation>
+    </annotation>
+    <attribute name="source" type="string">
+      <annotation>
+        <documentation>Component name to which the cached value
+                is related.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="category" type="string">
+      <annotation>
+        <documentation>Operation that belongs to the component,
+                which is also related to the cached value.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="instance" type="string">
+      <annotation>
+        <documentation>Instance, containing the information
+                used to execute the operation related to
+                the cached value.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="TimePeriod">
+    <annotation>
+      <documentation>A base / value business entity used to represent a
+				period of time, between two timepoints</documentation>
+    </annotation>
+    <sequence>
+      <element name="endDateTime" type="dateTime" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>An instant of time, ending at the TimePeriod:</documentation>
+          <documentation>Notes:</documentation>
+          <documentation>If null, then represents to the end of time</documentation>
+        </annotation>
+      </element>
+      <element name="startDateTime" type="dateTime" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>An instant of time, starting at the TimePeriod</documentation>
+          <documentation>Notes:</documentation>
+          <documentation>If null, then represents to the beginning of time</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="Money">
+    <annotation>
+      <documentation>A base / value business entity used to represent money</documentation>
+    </annotation>
+    <sequence>
+      <element name="amount" type="float" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>A positive floating point number.</documentation>
+        </annotation>
+      </element>
+      <element name="units" type="string" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>Currency(Notes:refer to [ISO 4217]) or non-currency terms, such as loyalty points.</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FResult_v2_ESO</con:url><con:content><![CDATA[<!--Ref ESO template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/ESO/Result/v2" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/ESO/Result/v2" xmlns:esons_error="http://www.entel.cl/ESO/Error/v1" xmlns:eddns_dictionary="http://www.entel.cl/EDD/Dictionary/v1">
+  <import namespace="http://www.entel.cl/ESO/Error/v1" schemaLocation="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FError_v1_ESO"/>
+  <import namespace="http://www.entel.cl/EDD/Dictionary/v1" schemaLocation="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FDictionary_v1_EDD"/>
+  <annotation>
+    <documentation>Meta-Information related to a certain execution result.</documentation>
+  </annotation>
+  <complexType name="Result_Type">
+    <sequence>
+      <element ref="esons_error:CanonicalError" minOccurs="0">
+        <annotation>
+          <documentation>Canonical Representation of an unique non-successfull outcome status, if there is any. The Error modifier is applied as this element will be sent mainly on Error/Warning outcomes</documentation>
+        </annotation>
+      </element>
+      <element ref="esons_error:SourceError" minOccurs="0">
+        <annotation>
+          <documentation>Main Native Error associated with the Canonical Error, which was obtained by the use if the former.</documentation>
+        </annotation>
+      </element>
+      <element name="CorrelativeErrors" minOccurs="0">
+        <annotation>
+          <documentation>Native Errors correlative with the main Source Error, that may be included for trace purposes.</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element ref="esons_error:SourceError" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+    <attribute name="status" use="required" type="tns:resultStatus_SType">
+      <annotation>
+        <documentation>Result status of the Execution.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="description" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Non-Technical Information related to this
+						particular result.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <simpleType name="resultStatus_SType">
+    <restriction base="string">
+      <enumeration value="OK"/>
+      <enumeration value="WARNING"/>
+      <enumeration value="ERROR"/>
+    </restriction>
+  </simpleType>
+  <element name="Result" type="tns:Result_Type">
+    <annotation>
+      <documentation>Meta-Information related to a certain execution result.</documentation>
+    </annotation>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FError_v1_ESO</con:url><con:content><![CDATA[<!--Ref ESO template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/ESO/Error/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/ESO/Error/v1" xmlns:eddns_dictionary="http://www.entel.cl/EDD/Dictionary/v1">
+  <import namespace="http://www.entel.cl/EDD/Dictionary/v1" schemaLocation="http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1?SCHEMA%2FES_GetCustomerInfo_v1%2FResources%2FWSDL%2FSOAP%2FESH%2FDictionary_v1_EDD"/>
+  <annotation>
+    <documentation>Data structures related to Error information handling.</documentation>
+  </annotation>
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="Canonical_Error_Type">
+    <annotation>
+      <documentation>It holds the information of an error in Canonical format. This should not be taken as an autonomous Error Object, 
+                        as it is always to be contextualized within a Result Element. This object alone serves no other puirpose as to represent
+                        detailed outcome information regarding an particular execution of any capability/method/function.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:ErrorMetadata_Type">
+        <attribute name="type" type="tns:CanonicalErrorType_SType">
+          <annotation>
+            <documentation>Canonical Error Type. This element can change during the error interpretation process, within each service execution.</documentation>
+          </annotation>
+        </attribute>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="CanonicalError" type="tns:Canonical_Error_Type"/>
+  <simpleType name="CanonicalErrorType_SType">
+    <restriction base="string">
+      <enumeration value="NEG">
+        <annotation>
+          <documentation>Indica la existencia de un error relacionada a negocio (Expected Error).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="DAT">
+        <annotation>
+          <documentation>Indica la existencia de un error originado por:
+                                                • formato de datos
+                                                • obligatoriedad
+                                                • validación de la estructura del mensaje no corresponde con el contrato de servicio,
+                                                  ya sea en la petición enviada al Proveedor de Datos, como en la respuesta obtenida del mismo.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="TEC">
+        <annotation>
+          <documentation>Indica la presencia de un error de naturaleza técnica en el proveedor de datos (Unexpected Errors).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="UNK">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error no identificado (mapeado).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="SEG">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error relacionado al ámbito de la seguridad (Unexpected Error), 
+                                                • Validación de credenciales.
+                                                • Permisos de ejecución.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWNE">
+        <annotation>
+          <documentation>Indica la existencia de un error relacionada a negocio (Expected Error).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWDA">
+        <annotation>
+          <documentation>Indica la existencia de un error originado por:
+                                                • formato de datos,
+                                                • obligatoriedad
+                                                • validación de la estructura del mensaje no corresponde con el contrato de servicio, ya sea en la petición enviada al servicio consumidor, como en la respuesta obtenida del mismo.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWTE">
+        <annotation>
+          <documentation>Indica la presencia de un error de naturaleza técnica en el framework (Unexpected Errors):
+                                                • No disponibilidad.
+                                                • Error en la comunicación, (por ejemplo: timeouts).
+                                                • Otros errores propios del sistema productor de datos.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWUN">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error que no identificado (mapeado).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWSE">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error relacionado al ámbito de la seguridad (Unexpected Error), 
+                                                • Validación de credenciales.
+                                                • Permisos de ejecución.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWCF">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error relacionado a la configuracion (inconsistente).</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="ErrorMetadata_Type">
+    <attribute name="code" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Error Code.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="description" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Error Description. There may be no description if the error is represented in a non-canonical form, but this element should be populated if its on the canonical form.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <element name="ErrorMetadata" type="tns:ErrorMetadata_Type"/>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="ErrorSourceDetails_Type">
+    <attribute name="source" type="eddns_dictionary:sysCode_SType">
+      <annotation>
+        <documentation>An error Source. It depicts the source of an associated error, as described by the component that handled it in each case. This should be a known System Code.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="details" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>An error Source Details. It depicts the original source detailes of an associated  Error, as described by the component that handled it in each case. This data should not be restricted to a known code, as it is descriptive information.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <element name="ErrorSourceDetails" type="tns:ErrorSourceDetails_Type"/>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="SourceError_Type">
+    <annotation>
+      <documentation>It holds the information of error in non-canonical format, with its associated information.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:ErrorMetadata_Type">
+        <sequence>
+          <element ref="tns:ErrorSourceDetails" minOccurs="1"/>
+          <element name="SourceFault" type="anyType" minOccurs="0">
+            <annotation>
+              <documentation>Source Fault Message. This can be an exception, an controlled message, etc. This should represent where the ErrorMetadata was interpreted from, and it should be provided by the Source described on the ErrorSourceDetails. Its an optional element, and should be used only when this type of information can be shown and when it is neccesary.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SourceError" type="tns:SourceError_Type"/>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <element name="ErrorIndex" type="eddns_dictionary:SimpleIndexDetail_Type">
+    <annotation>
+      <documentation>It allows the specific indexation of an error to a certain context or resource. It is used to increase 
+                               the level of specificity to be considered for Error Translation within the ErrorManager. This element is completely 
+                               optional, as this level of detail is not mandatory for sucessfull error translation.</documentation>
+    </annotation>
+  </element>
+  <!--******************************************************************************************************************************************************************-->
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1</con:endpoint></con:endpoints><con:operation id="a272210a-b36b-43d1-8882-5b9638cad382" isOneWay="false" action="http://www.entel.cl/EBM/GetCustomerInfo/v1" name="GetCustomerInfo" bindingOperationName="GetCustomerInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bcc71ff7-aa50-40da-aba3-6aea82c85aee" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eusbpreprod.entel.pe:7010/ES/GetCustomerInfo/v1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.entel.cl/EBM/GetCustomerInfo/v1" xmlns:v11="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:v2="http://www.entel.cl/ESO/Result/v2" xmlns:v12="http://www.entel.cl/ESO/Error/v1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <v1:GetCustomerInfo_REQ>\r
+         <v11:RequestHeader>\r
+            <v11:Consumer sysCode="?" enterpriseCode="?" countryCode="?"/>\r
+            <v11:Trace clientReqTimestamp="?" reqTimestamp="?" rspTimestamp="?" processID="?" eventID="?" sourceID="?" correlationEventID="?" conversationID="?" correlationID="?">\r
+               <!--Optional:-->\r
+               <v11:Service code="?" name="?" operation="?"/>\r
+            </v11:Trace>\r
+            <!--Optional:-->\r
+            <v11:Channel name="?" mode="?"/>\r
+            <!--Optional:-->\r
+            <v2:Result status="?" description="?">\r
+               <!--Optional:-->\r
+               <v12:CanonicalError code="?" description="?" type="?"/>\r
+               <!--Optional:-->\r
+               <v12:SourceError code="?" description="?">\r
+                  <v12:ErrorSourceDetails source="?" details="?"/>\r
+                  <!--Optional:-->\r
+                  <v12:SourceFault>?</v12:SourceFault>\r
+               </v12:SourceError>\r
+               <!--Optional:-->\r
+               <v2:CorrelativeErrors>\r
+                  <!--1 or more repetitions:-->\r
+                  <v12:SourceError code="?" description="?">\r
+                     <v12:ErrorSourceDetails source="?" details="?"/>\r
+                     <!--Optional:-->\r
+                     <v12:SourceFault>?</v12:SourceFault>\r
+                  </v12:SourceError>\r
+               </v2:CorrelativeErrors>\r
+            </v2:Result>\r
+         </v11:RequestHeader>\r
+         <v1:Body>\r
+            <v1:CustomerAccount>\r
+               <!--Optional:-->\r
+               <v1:Asset>\r
+                  <v1:MSISDN>\r
+                     <v1:SN>51924865558</v1:SN>\r
+                  </v1:MSISDN>\r
+               </v1:Asset>\r
+               <!--Optional:-->\r
+               <v1:Individual>\r
+                  <v1:IndividualIdentification>\r
+                     <v1:number>?</v1:number>\r
+                     <v1:type>?</v1:type>\r
+                  </v1:IndividualIdentification>\r
+               </v1:Individual>\r
+            </v1:CustomerAccount>\r
+         </v1:Body>\r
+      </v1:GetCustomerInfo_REQ>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.entel.cl/ESC/GetCustomerInfo/v1/GetCustomerInfo_PortType/GetCustomerInfoRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="46411dae-2be6-46f7-bb7d-93b8ce7a396c" wsaVersion="NONE" name="MigrationInfo_SOAP12Binding" type="wsdl" bindingName="{http://www.entel.cl/ESC/MigrationInfo/v1}MigrationInfo_SOAP12Binding" soapVersion="1_2" anonymous="optional" definition="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?wsdl"><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?wsdl</con:url><con:content><![CDATA[<WL5G3N0:definitions targetNamespace="http://www.entel.cl/ESC/MigrationInfo/v1" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.entel.cl/EBM/MigrationInfo/Create/v1" xmlns:WL5G3N2="http://www.entel.cl/EBM/MigrationInfo/Update/v1" xmlns:WL5G3N3="http://www.entel.cl/EBM/MigrationInfo/Get/v1" xmlns:WL5G3N4="http://www.entel.cl/ESC/MigrationInfo/v1" xmlns:WL5G3N5="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <WL5G3N0:types>
+    <xs:schema xmlns:ebmns_Create="http://www.entel.cl/EBM/MigrationInfo/Create/v1" xmlns:ebmns_Get="http://www.entel.cl/EBM/MigrationInfo/Get/v1" xmlns:ebmns_Update="http://www.entel.cl/EBM/MigrationInfo/Update/v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://www.entel.cl/ESC/MigrationInfo/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.entel.cl/EBM/MigrationInfo/Create/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FES_MigrationInfo_v2%2FResources%2FWSDL%2FSOAP12%2FCreate_MigrationInfo_v1_EBM"/>
+      <xs:import namespace="http://www.entel.cl/EBM/MigrationInfo/Update/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FES_MigrationInfo_v2%2FResources%2FWSDL%2FSOAP12%2FUpdate_MigrationInfo_v1_EBM"/>
+      <xs:import namespace="http://www.entel.cl/EBM/MigrationInfo/Get/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FES_MigrationInfo_v2%2FResources%2FWSDL%2FSOAP12%2FGet_MigrationInfo_v1_EBM"/>
+    </xs:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="Create_Message_In">
+    <WL5G3N0:part element="WL5G3N1:Create_MigrationInfo_REQ" name="In"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Create_Message_Out">
+    <WL5G3N0:part element="WL5G3N1:Create_MigrationInfo_RSP" name="Out"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Create_Message_Fault">
+    <WL5G3N0:part element="WL5G3N1:Create_MigrationInfo_FRSP" name="Fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Update_Message_In">
+    <WL5G3N0:part element="WL5G3N2:Update_MigrationInfo_REQ" name="In"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Update_Message_Out">
+    <WL5G3N0:part element="WL5G3N2:Update_MigrationInfo_RSP" name="Out"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Update_Message_Fault">
+    <WL5G3N0:part element="WL5G3N2:Update_MigrationInfo_FRSP" name="Fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Get_Message_In">
+    <WL5G3N0:part element="WL5G3N3:Get_MigrationInfo_REQ" name="In"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Get_Message_Out">
+    <WL5G3N0:part element="WL5G3N3:Get_MigrationInfo_RSP" name="Out"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="Get_Message_Fault">
+    <WL5G3N0:part element="WL5G3N3:Get_MigrationInfo_FRSP" name="Fault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="MigrationInfo_PortType">
+    <WL5G3N0:operation name="Create">
+      <WL5G3N0:input message="WL5G3N4:Create_Message_In"/>
+      <WL5G3N0:output message="WL5G3N4:Create_Message_Out"/>
+      <WL5G3N0:fault message="WL5G3N4:Create_Message_Fault" name="DefaultFault"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="Update">
+      <WL5G3N0:input message="WL5G3N4:Update_Message_In"/>
+      <WL5G3N0:output message="WL5G3N4:Update_Message_Out"/>
+      <WL5G3N0:fault message="WL5G3N4:Update_Message_Fault" name="DefaultFault"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="Get">
+      <WL5G3N0:input message="WL5G3N4:Get_Message_In"/>
+      <WL5G3N0:output message="WL5G3N4:Get_Message_Out"/>
+      <WL5G3N0:fault message="WL5G3N4:Get_Message_Fault" name="DefaultFault"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="MigrationInfo_SOAP12Binding" type="WL5G3N4:MigrationInfo_PortType">
+    <WL5G3N5:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="Create">
+      <WL5G3N5:operation soapAction="http://www.entel.cl/EBM/MigrationInfo/Create/v1"/>
+      <WL5G3N0:input>
+        <WL5G3N5:body parts="In" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N5:body parts="Out" use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="DefaultFault">
+        <WL5G3N5:fault name="DefaultFault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="Update">
+      <WL5G3N5:operation soapAction="http://www.entel.cl/EBM/MigrationInfo/Update/v1"/>
+      <WL5G3N0:input>
+        <WL5G3N5:body parts="In" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N5:body parts="Out" use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="DefaultFault">
+        <WL5G3N5:fault name="DefaultFault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="Get">
+      <WL5G3N5:operation soapAction="http://www.entel.cl/EBM/MigrationInfo/Get/v1"/>
+      <WL5G3N0:input>
+        <WL5G3N5:body parts="In" use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N5:body parts="Out" use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="DefaultFault">
+        <WL5G3N5:fault name="DefaultFault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="MigrationInfo_Service">
+    <WL5G3N0:documentation>OSB Service</WL5G3N0:documentation>
+    <WL5G3N0:port binding="WL5G3N4:MigrationInfo_SOAP12Binding" name="MigrationInfo_Port">
+      <WL5G3N5:address location="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FES_MigrationInfo_v2%2FResources%2FWSDL%2FSOAP12%2FCreate_MigrationInfo_v1_EBM</con:url><con:content><![CDATA[<schema targetNamespace="http://www.entel.cl/EBM/MigrationInfo/Create/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:header="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:tns="http://www.entel.cl/EBM/MigrationInfo/Create/v1" xmlns:ebons_resource="http://www.entel.cl/EBO/Resource/v1" xmlns:ebons_msisdn="http://www.entel.cl/EBO/MSISDN/v1" xmlns:ebons_billingaccount="http://www.entel.cl/EBO/BillingAccount/v1" xmlns:ebons_contract="http://www.entel.cl/EBO/Contract/v1" xmlns:ebons_customeraccount="http://www.entel.cl/EBO/CustomerAccount/v1" xmlns:ebons_individual="http://www.entel.cl/EBO/Individual/v1" xmlns:ebons_asset="http://www.entel.cl/EBO/Asset/v1" xmlns:ebons_individualidentification="http://www.entel.cl/EBO/IndividualIdentification/v1" xmlns:ebons_migration="http://www.entel.cl/EBO/Migration/v1">
+  <!---=- start:Imports -= -->
+  <import namespace="http://www.entel.cl/ESO/MessageHeader/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FMessageHeader_v1_ESO"/>
+  <import namespace="http://www.entel.cl/EBO/Resource/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FResource_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/MSISDN/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMSISDN_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/BillingAccount/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FBillingAccount_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Contract/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FContract_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/CustomerAccount/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCustomerAccount_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Individual/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividual_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Asset/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FAsset_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/IndividualIdentification/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividualIdentification_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Migration/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMigration_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBM Content -= -->
+  <element name="Create_MigrationInfo_REQ" type="tns:Create_MigrationInfo_REQ_Type"/>
+  <complexType name="Create_MigrationInfo_REQ_Type">
+    <sequence>
+      <element ref="header:RequestHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence>
+            <element name="CustomerAccount" maxOccurs="1" minOccurs="1">
+              <complexType>
+                <sequence>
+                  <element name="Asset" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element name="Contract" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_contract:ID" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element name="MSISDN" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_msisdn:SN" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element name="Resource" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_resource:id" maxOccurs="1" minOccurs="1"/>
+                              <element ref="ebons_resource:resourceType" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="BillingAccount" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element ref="ebons_billingaccount:externalID" maxOccurs="1" minOccurs="1"/>
+                        <element ref="ebons_billingaccount:status" maxOccurs="1" minOccurs="1"/>
+                        <element ref="ebons_billingaccount:statusChangeDate"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="Individual" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element name="IndividualIdentification" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_individualidentification:number" maxOccurs="1" minOccurs="1"/>
+                              <element ref="ebons_individualidentification:type" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="Migration" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element ref="ebons_migration:batchID" maxOccurs="1" minOccurs="0"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="Create_MigrationInfo_RSP" type="tns:Create_MigrationInfo_RSP_Type"/>
+  <complexType name="Create_MigrationInfo_RSP_Type">
+    <sequence>
+      <element ref="header:ResponseHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence/>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="Create_MigrationInfo_FRSP" type="tns:Create_MigrationInfo_FRSP_Type"/>
+  <complexType name="Create_MigrationInfo_FRSP_Type">
+    <sequence>
+      <element ref="header:ResponseHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence/>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <!---=- end:EBM Content -= -->
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FMessageHeader_v1_ESO</con:url><con:content><![CDATA[<!--Ref ESO template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/ESO/MessageHeader/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:esons_result="http://www.entel.cl/ESO/Result/v2" xmlns:esons_error="http://www.entel.cl/ESO/Error/v1" xmlns:eddns_dictionary="http://www.entel.cl/EDD/Dictionary/v1">
+  <import namespace="http://www.entel.cl/EDD/Dictionary/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEDD%2FDictionary_v1_EDD"/>
+  <annotation>
+    <documentation>Data structures representing metadata related to a certain Service Operation Execution.</documentation>
+  </annotation>
+  <import namespace="http://www.entel.cl/ESO/Result/v2" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FResult_v2_ESO"/>
+  <complexType name="MessageHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the
+				execution of a certain service operation, during its
+				original request, propagation and final response.</documentation>
+    </annotation>
+    <sequence>
+      <element ref="tns:Consumer"/>
+      <element ref="tns:Trace"/>
+      <element ref="tns:Channel" minOccurs="0"/>
+    </sequence>
+  </complexType>
+  <complexType name="Consumer_Type">
+    <annotation>
+      <documentation>Information about the Service Consumer.</documentation>
+    </annotation>
+    <attribute name="sysCode" type="eddns_dictionary:sysCode_SType" use="required">
+      <annotation>
+        <documentation>Unique System Code. Represents the service
+					consumer.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="enterpriseCode" type="eddns_dictionary:sysCode_SType" use="required">
+      <annotation>
+        <documentation>Unique Enterprise Code. Represents the enterprise service
+					consumer.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="countryCode" type="eddns_dictionary:countryCode_SType" use="required">
+      <annotation>
+        <documentation>Unique Country Code. Represents the Country from which
+				the execution was made.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="Trace_Type">
+    <annotation>
+      <documentation>Meta-Information related to traceability, which uniquely
+				identifies this particular execution.</documentation>
+    </annotation>
+    <sequence>
+      <element ref="tns:Service" minOccurs="0">
+        <annotation>
+          <documentation>Service that holds the control of the
+						execution. This is expected to change each time
+						a Service becomes statefull.</documentation>
+        </annotation>
+      </element>
+    </sequence>
+    <attribute name="clientReqTimestamp" use="required" type="eddns_dictionary:messageTimeStamp_SType">
+      <annotation>
+        <documentation>Represents the exact date-time when the consumer/client sent the message to 
+					the Service. This should be sent by Service
+					Consumer, and never changed by the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="reqTimestamp" type="eddns_dictionary:messageTimeStamp_SType">
+      <annotation>
+        <documentation>Represents the date-time when the request was taken
+					by the Service. This should not be sent by a Service
+					Consumer, but populated by the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="rspTimestamp" type="eddns_dictionary:messageTimeStamp_SType">
+      <annotation>
+        <documentation>Represents the date-time when the response was
+					delivered by the Service. This should not be sent by
+					a Service Consumer, but populated by the Requested
+					Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="processID" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Unique process execution instance identifier. This should
+					be sent by a Service Consumer, and never changed on
+					the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="eventID" use="required" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Unique event execution instance identifier. This should
+					be sent by a Service Consumer, and never changed on
+					the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="sourceID" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Another level of detail to be used on-demand by service 
+					consumers, in compliance with any propouse they may 
+					see fit in each case. It should be sent by a Service 
+					Consumer, and never changed on the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="correlationEventID" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Unique EventyID correlation identifier, used to relate one
+					execution to another. It should be sent by a Service Consumer, 
+					and never changed on the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="conversationID" type="tns:conversationID_SType">
+      <annotation>
+        <documentation>Unique correlation identifier, used to relate one
+					execution to another. This should not be polulated by consumer, 
+					it is for internal use only.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="correlationID" type="tns:conversationID_SType">
+      <annotation>
+        <documentation>Unique correlation identifier, used to relate one
+					excecution to another. This should not be polulated by consumer, 
+					it is for internal use only.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <simpleType name="conversationID_SType">
+    <annotation>
+      <documentation>Unique correlation identifier, used to relate one
+					excecution to another. This should not be polulated by consumer, 
+					it is for internal use only.</documentation>
+    </annotation>
+    <restriction base="string"/>
+  </simpleType>
+  <complexType name="Channel_Type">
+    <annotation>
+      <documentation>It holds information about which channel is being used.</documentation>
+    </annotation>
+    <attribute name="name">
+      <annotation>
+        <documentation>Unique Channel Code. Represents the channel being
+					used.</documentation>
+      </annotation>
+      <simpleType>
+        <restriction base="eddns_dictionary:genericStringValue_SType"/>
+      </simpleType>
+    </attribute>
+    <attribute name="mode">
+      <annotation>
+        <documentation>Unique channel Mode. Represents the mode on which
+					the channel is being used.</documentation>
+      </annotation>
+      <simpleType>
+        <restriction base="eddns_dictionary:genericStringValue_SType"/>
+      </simpleType>
+    </attribute>
+  </complexType>
+  <complexType name="Country_Type">
+    <annotation>
+      <documentation>Country from which a certain Service Operation is requested.</documentation>
+    </annotation>
+    <attribute name="code" type="int" use="required">
+      <annotation>
+        <documentation>Unique Country Code. Represents the Country from which
+				the execution was made.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="name" type="string">
+      <annotation>
+        <documentation>Name of the Country.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="Service_Type">
+    <annotation>
+      <documentation>Meta-Information about a Service, during a certain operation execution.</documentation>
+    </annotation>
+    <attribute name="code" type="string">
+      <annotation>
+        <documentation>Unique Service Code. Represents the Service being
+					requested. This should not be sent by a Service
+					Consumer, but populated by the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="name" type="string">
+      <annotation>
+        <documentation>Name of the Service Being Requested. This should not
+					be sent by a Service Consumer, but populated by the
+					Requested Service.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="operation" type="string">
+      <annotation>
+        <documentation>Name of the Operation being requested for the
+					Service. This should not be sent by a Service
+					Consumer, but populated by the Requested Service.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="RequestHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the
+				execution of a certain service operation, during its
+				request.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:MessageHeader_Type">
+        <sequence>
+          <element ref="esons_result:Result" minOccurs="0">
+            <annotation>
+              <documentation>Result information associated with a Service request.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ResponseHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the
+				execution of a certain service operation, during its
+				response.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:MessageHeader_Type">
+        <sequence>
+          <element ref="esons_result:Result">
+            <annotation>
+              <documentation>Result information related to this response.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="RequestHeader" type="tns:RequestHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the
+				execution of a certain service operation, during its
+				request.</documentation>
+    </annotation>
+  </element>
+  <element name="ResponseHeader" type="tns:ResponseHeader_Type">
+    <annotation>
+      <documentation>It represents important metadata related to the
+				execution of a certain service operation, during its
+				response.</documentation>
+    </annotation>
+  </element>
+  <element name="Service" type="tns:Service_Type">
+    <annotation>
+      <documentation>Meta-Information about a Service, during a certain operation execution.</documentation>
+    </annotation>
+  </element>
+  <element name="Consumer" type="tns:Consumer_Type"/>
+  <element name="Channel" type="tns:Channel_Type"/>
+  <element name="Trace" type="tns:Trace_Type"/>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEDD%2FDictionary_v1_EDD</con:url><con:content><![CDATA[<!--Ref EDD template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/EDD/Dictionary/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EDD/Dictionary/v1">
+  <annotation>
+    <documentation>Simple and Basic data Structures, intented to be used across all the Inventory.</documentation>
+  </annotation>
+  <complexType name="SimpleIndexDetail_Type">
+    <annotation>
+      <documentation>It allows the correlation between two things, with a simple framework of modules and subModules. Althought both attributes, 
+				module and subModule, are not correlative to any pre-defined structure or taxonomy, it is assumed that the  subModule 
+				represents a component/attribute/member of the module. The subModule should not be sent if the module is ommitted. 
+				The module can be set without a subModule.</documentation>
+    </annotation>
+    <attribute name="module" type="tns:genericStringValue_SType" use="required"/>
+    <attribute name="subModule" type="tns:genericStringValue_SType"/>
+  </complexType>
+  <complexType name="SimpleEventPlaceHolderDetail_Type">
+    <annotation>
+      <documentation>Minimum detail to be able to identify the place and time of a particular event.</documentation>
+    </annotation>
+    <attribute name="time" type="tns:messageTimeStamp_SType" use="required"/>
+    <attribute name="place" type="tns:genericStringValue_SType" use="required"/>
+  </complexType>
+  <complexType name="StringDataMap_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree, on which a single value is assosiated with a single key for each item. 
+                
+                The value is always of undertermined String type.</documentation>
+    </annotation>
+    <sequence>
+      <element name="Item" type="tns:StringDataMapItem_Type" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="StringDataMapItem_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree item, on which a single value is assosiated with a single key.
+                
+                The value is always of undertermined String type.</documentation>
+    </annotation>
+    <attribute name="key" type="tns:genericStringValue_SType" use="required"/>
+    <attribute name="value" type="tns:genericStringValue_SType" use="required"/>
+  </complexType>
+  <complexType name="GenericDataMap_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree, on which a single value is assosiated with a single key for each item. 
+                
+                The value is of undetermined type.</documentation>
+    </annotation>
+    <sequence>
+      <element name="Item" type="tns:GenericDataMapItem_Type" maxOccurs="unbounded"/>
+    </sequence>
+  </complexType>
+  <complexType name="GenericDataMapItem_Type">
+    <annotation>
+      <documentation>Data Structure representing a map-like tree item, on which a single value is assosiated with a single key. 
+                
+                The value is of undetermined type.</documentation>
+    </annotation>
+    <sequence>
+      <element name="Value" type="anyType"/>
+    </sequence>
+    <attribute name="key" type="tns:genericStringValue_SType"/>
+  </complexType>
+  <simpleType name="messageTimeStamp_SType">
+    <annotation>
+      <documentation>Used for identifing a single timestamp of a particular message instance.</documentation>
+    </annotation>
+    <restriction base="dateTime">
+      <pattern value="[0-9]{4}-[01][0-9]-[0-3][0-9]T[0-2][0-9]:[0-5][0-9]:[0-6][0-9].*[0-9]*[0-9]*[0-9]*(Z|((\+|-)([0-1][0-2]|[0-0][0-9]):[0-5][0-9]))"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="sysCode_SType">
+    <annotation>
+      <documentation>Used for univoquely identifing a System, Legacy, Application, etc..</documentation>
+    </annotation>
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="countryCode_SType">
+    <annotation>
+      <documentation>Used for univoquely identifing a country.</documentation>
+    </annotation>
+    <restriction base="string">
+      <length value="3"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="alphaCode_SType">
+    <annotation>
+      <documentation>Alphanumeric code represented by a 3 characters string.</documentation>
+    </annotation>
+    <restriction base="string">
+      <length value="3"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="sysName_SType">
+    <annotation>
+      <documentation>Used for univoquely describing a instance of a System, Legacy, Application, etc.</documentation>
+    </annotation>
+    <restriction base="string">
+      <length value="10"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="genericStringValue_SType">
+    <annotation>
+      <documentation>Simple type used for values on which its representation is an undertermined string chain.</documentation>
+    </annotation>
+    <restriction base="string"/>
+  </simpleType>
+  <simpleType name="age_SType">
+    <annotation>
+      <documentation>It depicts the age of a person or object.</documentation>
+    </annotation>
+    <restriction base="int"/>
+  </simpleType>
+  <simpleType name="id_SType">
+    <annotation>
+      <documentation>Simple type used for unique identifiers.
+This is represented in the integer base, and could apply the necessary restrictions given its representation.</documentation>
+    </annotation>
+    <restriction base="int"/>
+  </simpleType>
+  <simpleType name="status_SType">
+    <restriction base="string">
+      <enumeration value="OK"/>
+      <enumeration value="ERROR"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="timeout_SType">
+    <annotation>
+      <documentation>Generic Timeout values, made out of int values</documentation>
+    </annotation>
+    <restriction base="int">
+      <!--Define future restrictions here.-->
+    </restriction>
+  </simpleType>
+  <complexType name="Credentials_Type">
+    <annotation>
+      <documentation>Security related information, that allows a Consumer to access a certain service operation.</documentation>
+    </annotation>
+    <attribute name="user" type="string">
+      <annotation>
+        <documentation>The username being used for executing this service. Its mainly used for Security Constraints Validations.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="password" type="string">
+      <annotation>
+        <documentation>The password being used for executing this service. Its mainly used for Security Constraints Validations.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="CacheKey_Type">
+    <annotation>
+      <documentation>Key used to store cached values.</documentation>
+    </annotation>
+    <attribute name="source" type="string">
+      <annotation>
+        <documentation>Component name to which the cached value
+                is related.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="category" type="string">
+      <annotation>
+        <documentation>Operation that belongs to the component,
+                which is also related to the cached value.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="instance" type="string">
+      <annotation>
+        <documentation>Instance, containing the information
+                used to execute the operation related to
+                the cached value.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <complexType name="TimePeriod">
+    <annotation>
+      <documentation>A base / value business entity used to represent a
+				period of time, between two timepoints</documentation>
+    </annotation>
+    <sequence>
+      <element name="endDateTime" type="dateTime" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>An instant of time, ending at the TimePeriod:</documentation>
+          <documentation>Notes:</documentation>
+          <documentation>If null, then represents to the end of time</documentation>
+        </annotation>
+      </element>
+      <element name="startDateTime" type="dateTime" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>An instant of time, starting at the TimePeriod</documentation>
+          <documentation>Notes:</documentation>
+          <documentation>If null, then represents to the beginning of time</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+  <complexType name="Money">
+    <annotation>
+      <documentation>A base / value business entity used to represent money</documentation>
+    </annotation>
+    <sequence>
+      <element name="amount" type="float" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>A positive floating point number.</documentation>
+        </annotation>
+      </element>
+      <element name="units" type="string" minOccurs="1" maxOccurs="1">
+        <annotation>
+          <documentation>Currency(Notes:refer to [ISO 4217]) or non-currency terms, such as loyalty points.</documentation>
+        </annotation>
+      </element>
+    </sequence>
+  </complexType>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FResult_v2_ESO</con:url><con:content><![CDATA[<!--Ref ESO template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/ESO/Result/v2" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/ESO/Result/v2" xmlns:esons_error="http://www.entel.cl/ESO/Error/v1" xmlns:eddns_dictionary="http://www.entel.cl/EDD/Dictionary/v1">
+  <import namespace="http://www.entel.cl/ESO/Error/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FError_v1_ESO"/>
+  <import namespace="http://www.entel.cl/EDD/Dictionary/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEDD%2FDictionary_v1_EDD"/>
+  <annotation>
+    <documentation>Meta-Information related to a certain execution result.</documentation>
+  </annotation>
+  <complexType name="Result_Type">
+    <sequence>
+      <element ref="esons_error:CanonicalError" minOccurs="0">
+        <annotation>
+          <documentation>Canonical Representation of an unique non-successfull outcome status, if there is any. The Error modifier is applied as this element will be sent mainly on Error/Warning outcomes</documentation>
+        </annotation>
+      </element>
+      <element ref="esons_error:SourceError" minOccurs="0">
+        <annotation>
+          <documentation>Main Native Error associated with the Canonical Error, which was obtained by the use if the former.</documentation>
+        </annotation>
+      </element>
+      <element name="CorrelativeErrors" minOccurs="0">
+        <annotation>
+          <documentation>Native Errors correlative with the main Source Error, that may be included for trace purposes.</documentation>
+        </annotation>
+        <complexType>
+          <sequence>
+            <element ref="esons_error:SourceError" maxOccurs="unbounded"/>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+    <attribute name="status" use="required" type="tns:resultStatus_SType">
+      <annotation>
+        <documentation>Result status of the Execution.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="description" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Non-Technical Information related to this
+						particular result.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <simpleType name="resultStatus_SType">
+    <restriction base="string">
+      <enumeration value="OK"/>
+      <enumeration value="WARNING"/>
+      <enumeration value="ERROR"/>
+    </restriction>
+  </simpleType>
+  <element name="Result" type="tns:Result_Type">
+    <annotation>
+      <documentation>Meta-Information related to a certain execution result.</documentation>
+    </annotation>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FError_v1_ESO</con:url><con:content><![CDATA[<!--Ref ESO template: v1.0 - NO
+BORRAR-->
+<schema targetNamespace="http://www.entel.cl/ESO/Error/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/ESO/Error/v1" xmlns:eddns_dictionary="http://www.entel.cl/EDD/Dictionary/v1">
+  <import namespace="http://www.entel.cl/EDD/Dictionary/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEDD%2FDictionary_v1_EDD"/>
+  <annotation>
+    <documentation>Data structures related to Error information handling.</documentation>
+  </annotation>
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="Canonical_Error_Type">
+    <annotation>
+      <documentation>It holds the information of an error in Canonical format. This should not be taken as an autonomous Error Object, 
+                        as it is always to be contextualized within a Result Element. This object alone serves no other puirpose as to represent
+                        detailed outcome information regarding an particular execution of any capability/method/function.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:ErrorMetadata_Type">
+        <attribute name="type" type="tns:CanonicalErrorType_SType">
+          <annotation>
+            <documentation>Canonical Error Type. This element can change during the error interpretation process, within each service execution.</documentation>
+          </annotation>
+        </attribute>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="CanonicalError" type="tns:Canonical_Error_Type"/>
+  <simpleType name="CanonicalErrorType_SType">
+    <restriction base="string">
+      <enumeration value="NEG">
+        <annotation>
+          <documentation>Indica la existencia de un error relacionada a negocio (Expected Error).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="DAT">
+        <annotation>
+          <documentation>Indica la existencia de un error originado por:
+                                                • formato de datos
+                                                • obligatoriedad
+                                                • validación de la estructura del mensaje no corresponde con el contrato de servicio,
+                                                  ya sea en la petición enviada al Proveedor de Datos, como en la respuesta obtenida del mismo.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="TEC">
+        <annotation>
+          <documentation>Indica la presencia de un error de naturaleza técnica en el proveedor de datos (Unexpected Errors).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="UNK">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error no identificado (mapeado).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="SEG">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error relacionado al ámbito de la seguridad (Unexpected Error), 
+                                                • Validación de credenciales.
+                                                • Permisos de ejecución.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWNE">
+        <annotation>
+          <documentation>Indica la existencia de un error relacionada a negocio (Expected Error).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWDA">
+        <annotation>
+          <documentation>Indica la existencia de un error originado por:
+                                                • formato de datos,
+                                                • obligatoriedad
+                                                • validación de la estructura del mensaje no corresponde con el contrato de servicio, ya sea en la petición enviada al servicio consumidor, como en la respuesta obtenida del mismo.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWTE">
+        <annotation>
+          <documentation>Indica la presencia de un error de naturaleza técnica en el framework (Unexpected Errors):
+                                                • No disponibilidad.
+                                                • Error en la comunicación, (por ejemplo: timeouts).
+                                                • Otros errores propios del sistema productor de datos.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWUN">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error que no identificado (mapeado).</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWSE">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error relacionado al ámbito de la seguridad (Unexpected Error), 
+                                                • Validación de credenciales.
+                                                • Permisos de ejecución.</documentation>
+        </annotation>
+      </enumeration>
+      <enumeration value="FWCF">
+        <annotation>
+          <documentation>Indica la ocurrencia de un error relacionado a la configuracion (inconsistente).</documentation>
+        </annotation>
+      </enumeration>
+    </restriction>
+  </simpleType>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="ErrorMetadata_Type">
+    <attribute name="code" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Error Code.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="description" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>Error Description. There may be no description if the error is represented in a non-canonical form, but this element should be populated if its on the canonical form.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <element name="ErrorMetadata" type="tns:ErrorMetadata_Type"/>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="ErrorSourceDetails_Type">
+    <attribute name="source" type="eddns_dictionary:sysCode_SType">
+      <annotation>
+        <documentation>An error Source. It depicts the source of an associated error, as described by the component that handled it in each case. This should be a known System Code.</documentation>
+      </annotation>
+    </attribute>
+    <attribute name="details" type="eddns_dictionary:genericStringValue_SType">
+      <annotation>
+        <documentation>An error Source Details. It depicts the original source detailes of an associated  Error, as described by the component that handled it in each case. This data should not be restricted to a known code, as it is descriptive information.</documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+  <element name="ErrorSourceDetails" type="tns:ErrorSourceDetails_Type"/>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <complexType name="SourceError_Type">
+    <annotation>
+      <documentation>It holds the information of error in non-canonical format, with its associated information.</documentation>
+    </annotation>
+    <complexContent>
+      <extension base="tns:ErrorMetadata_Type">
+        <sequence>
+          <element ref="tns:ErrorSourceDetails" minOccurs="1"/>
+          <element name="SourceFault" type="anyType" minOccurs="0">
+            <annotation>
+              <documentation>Source Fault Message. This can be an exception, an controlled message, etc. This should represent where the ErrorMetadata was interpreted from, and it should be provided by the Source described on the ErrorSourceDetails. Its an optional element, and should be used only when this type of information can be shown and when it is neccesary.</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <element name="SourceError" type="tns:SourceError_Type"/>
+  <!--******************************************************************************************************************************************************************-->
+  <!--******************************************************************************************************************************************************************-->
+  <element name="ErrorIndex" type="eddns_dictionary:SimpleIndexDetail_Type">
+    <annotation>
+      <documentation>It allows the specific indexation of an error to a certain context or resource. It is used to increase 
+                               the level of specificity to be considered for Error Translation within the ErrorManager. This element is completely 
+                               optional, as this level of detail is not mandatory for sucessfull error translation.</documentation>
+    </annotation>
+  </element>
+  <!--******************************************************************************************************************************************************************-->
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FResource_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/Resource/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/Resource/v1" xmlns:ebons_characteristics="http://www.entel.cl/EBO/Characteristics/v1">
+  <!---=- start:Imports -= -->
+  <xs:import namespace="http://www.entel.cl/EBO/Characteristics/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCharacteristics_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="SN" type="xs:string"/>
+  <xs:element name="externalID" type="xs:string"/>
+  <xs:element name="format" type="xs:string"/>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="imei" type="xs:string"/>
+  <xs:element name="isCompound" type="xs:boolean"/>
+  <xs:element name="isLogical" type="xs:boolean"/>
+  <xs:element name="isOperational" type="xs:boolean">
+    <xs:annotation>
+      <xs:documentation>This attribute is used to define the operational status of the object, and is implemented as a Boolean: TRUE means that the object is currently operational, and FALSE means that the object is not currently operational.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="isPending" type="xs:string"/>
+  <xs:element name="lrStatus" type="xs:integer">
+    <xs:annotation>
+      <xs:documentation>This is an enumerated integer whose value indicates the current status of the object.</xs:documentation>
+      <xs:documentation>Stopped indicates that the LogicalResource is known to still exist, but it is no longer operational. However, it has not failed.</xs:documentation>
+      <xs:documentation></xs:documentation>
+      <xs:documentation>Stressed indicates that the LogicalResource is functioning, but needs attention (e.g., it may be overheating, or overloaded in some way). This is similar to Predicted Failure, which indicates that this LogicalResource is functioning properly, but is predicting a failure in the near future.</xs:documentation>
+      <xs:documentation>In Maintenance indicates that this LogicalResource is being configured, maintained, or otherwise administered and is NOT available for service.</xs:documentation>
+      <xs:documentation>Unable To Contact indicates that the monitoring system has knowledge of this LogicalResource but has never been able to establish communications with it. In contrast, Lost Commmunications indicates that the LogicalResource has been contacted successfully in the past and is known to still exist; however, it is currently unreachable.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="manufactureDate" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>This is a string attribute that defines the date of manufacture of this item in the fixed format "dd/mm/yyyy". This is an optional attribute.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="objectID" type="xs:string"/>
+  <xs:element name="otherIdentifier" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>This is a string that is used to contain other important identifying data, such as a bar code, of the hardware item. This is an optional attribute.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="parentId" type="xs:string"/>
+  <xs:element name="physicalResourceId" type="xs:string"/>
+  <xs:element name="powerState" type="xs:integer">
+    <xs:annotation>
+      <xs:documentation>This is an enumerated integer that defines the current power status of the hardware item. Values include:</xs:documentation>
+      <xs:documentation>0:  Unknown</xs:documentation>
+      <xs:documentation>1:  Not Applicable</xs:documentation>
+      <xs:documentation>2:  No Power Applied</xs:documentation>
+      <xs:documentation>3: Full Power Applied</xs:documentation>
+      <xs:documentation>4:  Power Save - Normal</xs:documentation>
+      <xs:documentation>5:  Power Save - Degraded</xs:documentation>
+      <xs:documentation>6:  Power Save - Standby</xs:documentation>
+      <xs:documentation>7:  Power Save - Critical</xs:documentation>
+      <xs:documentation>8:  Power Save - Low Power Mode</xs:documentation>
+      <xs:documentation>9:  Power Save - Unknown</xs:documentation>
+      <xs:documentation>10: Power Cycle</xs:documentation>
+      <xs:documentation>11: Power Warning</xs:documentation>
+      <xs:documentation>12: Power Off</xs:documentation>
+      <xs:documentation>Value 1 means that the hardware item doesn't require the direct application of power (e.g., a but or bolt). If the value for this item is 3, then the PowerCapability class will describe the particular power requirements of this item through the HasPower association.</xs:documentation>
+      <xs:documentation>This is an optional attribute.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="resourceNumber" type="xs:string"/>
+  <xs:element name="resourceType" type="xs:string"/>
+  <xs:element name="serialNumber" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>This is a string that represents a manufacturer-allocated number used to identify different instances of the same hardware item. The ModelNumber and PartNumber attributes are used to identify different types of hardware items. This is a REQUIRED attribute.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="serviceState" type="xs:integer">
+    <xs:annotation>
+      <xs:documentation>This is an enumerated integer that defines the availability and usage (i.e., the service state) of this LogicalResource.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="state" type="xs:string"/>
+  <xs:element name="versionNumber" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>This is a string that identifies the version of this object. This is an optional attribute.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="resourceCharacteristics" type="ebons_characteristics:Characteristics_Type"/>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="Resource" type="tns:Resource_Type"/>
+  <xs:complexType name="Resource_Type">
+    <xs:annotation>
+      <xs:documentation>This object class defines the attributes that are common to all resource objects.</xs:documentation>
+      <xs:documentation>See R_TMF518_NRB_I_0001.</xs:documentation>
+      <xs:documentation>This object class defines the attributes that are common to all resource objects.</xs:documentation>
+      <xs:documentation>See R_TMF518_NRB_I_0001.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:SN" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:externalID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:format" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:id" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:imei" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:isCompound" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:isLogical" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:isOperational" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:isPending" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:lrStatus" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:manufactureDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:name" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:objectID" maxOccurs="1" minOccurs="1"/>
+      <xs:element ref="tns:otherIdentifier" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:parentId" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:physicalResourceId" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:powerState" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:resourceNumber" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:resourceType" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:serialNumber" maxOccurs="unbounded" minOccurs="0"/>
+      <xs:element ref="tns:serviceState" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:state" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:versionNumber" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:resourceCharacteristics" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCharacteristics_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/Characteristics/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/Characteristics/v1" xmlns:ebons_timeperiod="http://www.entel.cl/EBO/TimePeriod/v1">
+  <!---=- start:Imports -= -->
+  <xs:import namespace="http://www.entel.cl/EBO/TimePeriod/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FTimePeriod_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="classification" type="xs:string"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="displayValue" type="xs:string"/>
+  <xs:element name="id" type="xs:string"/>
+  <xs:element name="isArray" type="xs:boolean"/>
+  <xs:element name="maxCardinality" type="xs:long"/>
+  <xs:element name="name" type="xs:string"/>
+  <xs:element name="text" type="xs:string"/>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="value" type="xs:string"/>
+  <xs:element name="valueType" type="xs:string"/>
+  <xs:element name="validFor" type="ebons_timeperiod:TimePeriod_Type"/>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="Characteristics" type="tns:Characteristics_Type"/>
+  <xs:complexType name="Characteristics_Type">
+    <xs:sequence>
+      <xs:element ref="tns:classification" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:description" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:displayValue" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:id" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:isArray" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:maxCardinality" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:name" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:text" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:type" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:value" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:valueType" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:validFor" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FTimePeriod_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/TimePeriod/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/TimePeriod/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="endDate" type="xs:dateTime"/>
+  <xs:element name="startDate" type="xs:dateTime"/>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="TimePeriod" type="tns:TimePeriod_Type"/>
+  <xs:complexType name="TimePeriod_Type">
+    <xs:annotation>
+      <xs:documentation>As defined in document &lt;b>Data types in IM&lt;/b>. Document found in Eridoc:</xs:documentation>
+      <xs:documentation><![CDATA[<a href="https://erilink.ericsson.se/eridoc/erl/objectId/09004cff8a0074ea?docno=6/15935-FCP116428Uen&amp;action=current&amp;format=msw8"><font color="#0000ff"><u>https://erilink.ericsson.se/eridoc/erl/objectId/09004cff8a0074ea?docno=6/15935-FCP116428Uen&amp;action=current&amp;format=msw8</u></font></a>]]]]>><![CDATA[</xs:documentation>
+      <xs:documentation>Time Period can be expressed either as DateTimePeriod or as TimeOfDayPeriod</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:endDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:startDate" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMSISDN_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/MSISDN/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/MSISDN/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="SN" type="xs:string"/>
+  <xs:element name="format" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>format used in MSISDN</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="MSISDN" type="tns:MSISDN_Type"/>
+  <xs:complexType name="MSISDN_Type">
+    <xs:sequence>
+      <xs:element ref="tns:SN" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:format" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FBillingAccount_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/BillingAccount/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/BillingAccount/v1" xmlns:ebons_emailcontact="http://www.entel.cl/EBO/EmailContact/v1" xmlns:ebons_timeperiod="http://www.entel.cl/EBO/TimePeriod/v1">
+  <!---=- start:Imports -= -->
+  <xs:import namespace="http://www.entel.cl/EBO/EmailContact/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FEmailContact_v1_EBO"/>
+  <xs:import namespace="http://www.entel.cl/EBO/TimePeriod/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FTimePeriod_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="billDocumentType" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Tipo de factura papel o electronica</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="billingCycle" type="xs:string"/>
+  <xs:element name="billingCycleDate" type="xs:dateTime"/>
+  <xs:element name="bscsBillingAccountId" type="xs:string"/>
+  <xs:element name="bscsCustomerId" type="xs:string"/>
+  <xs:element name="costCenter" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Centro de Costo.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="externalCurrency" type="xs:string"/>
+  <xs:element name="externalID" type="xs:string"/>
+  <xs:element name="profileID" type="xs:string"/>
+  <xs:element name="programCode" type="xs:string"/>
+  <xs:element name="status" type="xs:string"/>
+  <xs:element name="statusChangeDate" type="xs:dateTime"/>
+  <xs:element name="billEmail" type="ebons_emailcontact:EmailContact_Type">
+    <xs:annotation>
+      <xs:documentation>Correo que debe enviar la factura</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="validFor" type="ebons_timeperiod:TimePeriod_Type">
+    <xs:annotation>
+      <xs:documentation>The time period the billing account is valid</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="BillingAccount" type="tns:BillingAccount_Type"/>
+  <xs:complexType name="BillingAccount_Type">
+    <xs:annotation>
+      <xs:documentation>A billing accounts accumulates all charges from products and contracts that will be shown on the same invoice or prepaid statement.</xs:documentation>
+      <xs:documentation>BSCS and CBiO concept of "Billing Accounts" is represented by this entity.</xs:documentation>
+      <xs:documentation>Also, the legacy CS concept of "main account" is represented by a BA.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:billDocumentType" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:billingCycle" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:billingCycleDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:bscsBillingAccountId" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:bscsCustomerId" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:costCenter" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:externalCurrency" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:externalID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:profileID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:programCode" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:status" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:statusChangeDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:billEmail" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:validFor" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FEmailContact_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/EmailContact/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/EmailContact/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="eMailAddress" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>full e-mail address in standard format</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="EmailContact" type="tns:EmailContact_Type"/>
+  <xs:complexType name="EmailContact_Type">
+    <xs:annotation>
+      <xs:documentation>The eMail address to use when contacting a given PartyRole. An eMailContact is a type of ContactMedium.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:eMailAddress" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FContract_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/Contract/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/Contract/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="ID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Identificador del Contracto</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="billingCallDetail" type="xs:boolean"/>
+  <xs:element name="signedDate" type="xs:dateTime"/>
+  <xs:element name="status" type="xs:string"/>
+  <xs:element name="statusReason" type="xs:string"/>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="Contract" type="tns:Contract_Type"/>
+  <xs:complexType name="Contract_Type">
+    <xs:sequence>
+      <xs:element ref="tns:ID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:billingCallDetail" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:signedDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:status" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:statusReason" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCustomerAccount_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/CustomerAccount/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/CustomerAccount/v1" xmlns:ebons_timeperiod="http://www.entel.cl/EBO/TimePeriod/v1" xmlns:ebons_individualidentification="http://www.entel.cl/EBO/IndividualIdentification/v1">
+  <!---=- start:Imports -= -->
+  <xs:import namespace="http://www.entel.cl/EBO/TimePeriod/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FTimePeriod_v1_EBO"/>
+  <xs:import namespace="http://www.entel.cl/EBO/IndividualIdentification/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividualIdentification_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="ID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A unique identifier that enables different instances of a CustomerAccount to be distinguished from each other.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="accountNumber" type="xs:string"/>
+  <xs:element name="accountStatus" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The condition of the account, such as due, paid, or in arrears.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="accountType" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A categorization of an account, such as individual, joint, and so forth, whose instances share some of the same characteristics.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="activationDate" type="xs:dateTime"/>
+  <xs:element name="billSendBy" type="xs:string"/>
+  <xs:element name="billingID" type="xs:string"/>
+  <xs:element name="blockCode" type="xs:string"/>
+  <xs:element name="classification" type="xs:string"/>
+  <xs:element name="contract" type="xs:string"/>
+  <xs:element name="creditLimit" type="xs:float">
+    <xs:annotation>
+      <xs:documentation>The maximum amount of money that may be charged on a account.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="currencyCode" type="xs:string"/>
+  <xs:element name="customerSince" type="xs:dateTime"/>
+  <xs:element name="customerType" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Tipo de Cliente, puede ser pre-pago, pos-pago, erc</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="externalID" type="xs:string"/>
+  <xs:element name="incorporationDate" type="xs:dateTime"/>
+  <xs:element name="legalEntityType" type="xs:string"/>
+  <xs:element name="multipleAccounts" type="xs:string"/>
+  <xs:element name="name" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>The name of the account.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="paymentResponsible" type="xs:string"/>
+  <xs:element name="pin" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A multidigit personal identification numbe that is used by a Customer to gain access to a CustomerAccount at an ATM, a computer, or a telephone system, and so forth.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="preferedShippingMethod" type="xs:string"/>
+  <xs:element name="registrationDate" type="xs:dateTime"/>
+  <xs:element name="revenueClass" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Clasificacion ARPU de un cliente</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="statusChangeDate" type="xs:dateTime"/>
+  <xs:element name="statusReason" type="xs:string"/>
+  <xs:element name="subType" type="xs:string"/>
+  <xs:element name="taxStatus" type="xs:string"/>
+  <xs:element name="validationDate" type="xs:dateTime"/>
+  <xs:element name="taxDocumentID" type="ebons_individualidentification:IndividualIdentification_Type">
+    <xs:annotation>
+      <xs:documentation>Documento para emission de documento tributario</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="validFor" type="ebons_timeperiod:TimePeriod_Type"/>
+  <xs:element name="customerMarket" type="xs:string"/>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="CustomerAccount" type="tns:CustomerAccount_Type"/>
+  <xs:complexType name="CustomerAccount_Type">
+    <xs:annotation>
+      <xs:documentation>An arrangement that a Customer has with an enterprise that provides Products to the Customer.</xs:documentation>
+      <xs:documentation>.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:ID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:accountNumber" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:accountStatus" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:accountType" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:activationDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:billSendBy" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:billingID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:blockCode" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:classification" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:contract" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:creditLimit" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:currencyCode" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:customerSince" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:customerType" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:externalID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:incorporationDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:legalEntityType" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:multipleAccounts" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:name" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:paymentResponsible" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:pin" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:preferedShippingMethod" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:registrationDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:revenueClass" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:statusChangeDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:statusReason" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:subType" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:taxStatus" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:validationDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:taxDocumentID" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:validFor" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:customerMarket" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividualIdentification_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/IndividualIdentification/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/IndividualIdentification/v1" xmlns:ebons_timeperiod="http://www.entel.cl/EBO/TimePeriod/v1">
+  <!---=- start:Imports -= -->
+  <xs:import namespace="http://www.entel.cl/EBO/TimePeriod/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FTimePeriod_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="activityCode" type="xs:string"/>
+  <xs:element name="expiry" type="xs:dateTime"/>
+  <xs:element name="issueDate" type="xs:dateTime">
+    <xs:annotation>
+      <xs:documentation>the date that the identification was produced / printed</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="issuingCountry" type="xs:string"/>
+  <xs:element name="number" type="xs:string"/>
+  <xs:element name="scan" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>A scan of the identification paper</xs:documentation>
+      <xs:documentation>Note:</xs:documentation>
+      <xs:documentation>May be used to get a copy of the photo to help in identification</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="serialNumber" type="xs:string"/>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="validateIdentification" type="xs:boolean"/>
+  <xs:element name="validFor" type="ebons_timeperiod:TimePeriod_Type">
+    <xs:annotation>
+      <xs:documentation>The time period that the Party Identification is valid for</xs:documentation>
+      <xs:documentation>Note:</xs:documentation>
+      <xs:documentation>The validitity start date may not necessarily equal the issue date (e.g. credit cards are only valid some time after thay are issued)</xs:documentation>
+      <xs:documentation>Permitted Values:</xs:documentation>
+      <xs:documentation>Refer Time Period class</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="IndividualIdentification" type="tns:IndividualIdentification_Type"/>
+  <xs:complexType name="IndividualIdentification_Type">
+    <xs:annotation>
+      <xs:documentation>Individual Identification represents our registration of information used as proof of identity by an Individual</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:activityCode" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:expiry" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:issueDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:issuingCountry" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:number" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:scan" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:serialNumber" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:type" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:validateIdentification" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:validFor" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividual_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/Individual/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/Individual/v1" xmlns:ebons_country="http://www.entel.cl/EBO/Country/v1" xmlns:ebons_placeofbirth="http://www.entel.cl/EBO/PlaceOfBirth/v1">
+  <!---=- start:Imports -= -->
+  <xs:import namespace="http://www.entel.cl/EBO/Country/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCountry_v1_EBO"/>
+  <xs:import namespace="http://www.entel.cl/EBO/PlaceOfBirth/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FPlaceOfBirth_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="age" type="xs:integer"/>
+  <xs:element name="aliveDuring" type="xs:dateTime">
+    <xs:annotation>
+      <xs:documentation>birth date and death date</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="birthDate" type="xs:dateTime"/>
+  <xs:element name="degree" type="xs:string"/>
+  <xs:element name="educationalLevel" type="xs:string"/>
+  <xs:element name="gender" type="xs:string"/>
+  <xs:element name="icom" type="xs:string"/>
+  <xs:element name="jobTitle" type="xs:string"/>
+  <xs:element name="maritalStatusDate" type="xs:dateTime"/>
+  <xs:element name="martialStatus" type="xs:string"/>
+  <xs:element name="nationality" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Pointer to a country object</xs:documentation>
+      <xs:documentation>BSSF: changed to reference</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="typeCode" type="xs:string"/>
+  <xs:element name="voteIndicator" type="xs:string"/>
+  <xs:element name="countryOfBirth" type="ebons_country:Country_Type">
+    <xs:annotation>
+      <xs:documentation>Pointer to a country object</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="placeOfBirth" type="ebons_placeofbirth:PlaceOfBirth_Type">
+    <xs:annotation>
+      <xs:documentation>Pointer to a Location object</xs:documentation>
+      <xs:documentation>City, town name etc.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="Individual" type="tns:Individual_Type"/>
+  <xs:complexType name="Individual_Type">
+    <xs:annotation>
+      <xs:documentation>Represents a single human being ( a man, woman or child).</xs:documentation>
+      <xs:documentation>The individual could be a customer, an employee or any other person that the organization needs to store information about. An Individual is a type of Party</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:age" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:aliveDuring" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:birthDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:degree" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:educationalLevel" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:gender" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:icom" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:jobTitle" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:maritalStatusDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:martialStatus" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:nationality" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:typeCode" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:voteIndicator" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:countryOfBirth" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:placeOfBirth" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCountry_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/Country/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/Country/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="Iso2Code" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>ISO 2 letter country abbreviation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="Iso3Code" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>ISO 3 letter country abbreviation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="countryCode" type="xs:string"/>
+  <xs:element name="name" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>the name that the Country is known by</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="type" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>the type of country</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="Country" type="tns:Country_Type"/>
+  <xs:complexType name="Country_Type">
+    <xs:annotation>
+      <xs:documentation>This is an example of a concrete Geographic Location entity.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element ref="tns:Iso2Code" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:Iso3Code" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:countryCode" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:name" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:type" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FPlaceOfBirth_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/PlaceOfBirth/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/PlaceOfBirth/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="departament" type="xs:string"/>
+  <xs:element name="district" type="xs:string"/>
+  <xs:element name="province" type="xs:string"/>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="PlaceOfBirth" type="tns:PlaceOfBirth_Type"/>
+  <xs:complexType name="PlaceOfBirth_Type">
+    <xs:sequence>
+      <xs:element ref="tns:departament" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:district" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:province" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FAsset_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/Asset/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/Asset/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="ID" type="xs:string"/>
+  <xs:element name="activationDate" type="xs:dateTime"/>
+  <xs:element name="assetIntegrationId" type="xs:string"/>
+  <xs:element name="blackListInd" type="xs:boolean"/>
+  <xs:element name="createDate" type="xs:dateTime"/>
+  <xs:element name="deactivationDate" type="xs:dateTime"/>
+  <xs:element name="description" type="xs:string"/>
+  <xs:element name="family" type="xs:string"/>
+  <xs:element name="oldPlan" type="xs:string"/>
+  <xs:element name="plan" type="xs:string"/>
+  <xs:element name="status" type="xs:string"/>
+  <xs:element name="statusChangeDate" type="xs:dateTime"/>
+  <xs:element name="statusDetail" type="xs:string"/>
+  <xs:element name="subFamily" type="xs:string"/>
+  <xs:element name="subStatus" type="xs:string"/>
+  <xs:element name="type" type="xs:string"/>
+  <xs:element name="updateDate" type="xs:dateTime"/>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="Asset" type="tns:Asset_Type"/>
+  <xs:complexType name="Asset_Type">
+    <xs:sequence>
+      <xs:element ref="tns:ID" maxOccurs="1" minOccurs="1"/>
+      <xs:element ref="tns:activationDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:assetIntegrationId" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:blackListInd" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:createDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:deactivationDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:description" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:family" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:oldPlan" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:plan" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:status" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:statusChangeDate" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:statusDetail" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:subFamily" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:subStatus" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:type" maxOccurs="1" minOccurs="0"/>
+      <xs:element ref="tns:updateDate" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMigration_v1_EBO</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.entel.cl/EBO/Migration/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.entel.cl/EBO/Migration/v1">
+  <!---=- start:Imports -= -->
+  <!---=- end:Imports -= -->
+  <!---=- start:EBO Content -= -->
+  <!---=- start:EBO root elements defs -= -->
+  <xs:element name="batchID" type="xs:string">
+    <xs:annotation>
+      <xs:documentation>Migration batch ID</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <!---=- end:EBO root elements defs -= -->
+  <!---=- start:EBO complexType defs -= -->
+  <xs:element name="Migration" type="tns:Migration_Type"/>
+  <xs:complexType name="Migration_Type">
+    <xs:sequence>
+      <xs:element ref="tns:batchID" maxOccurs="1" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!---=- end:EBO complexType defs -= -->
+  <!---=- end:EBO Content -= -->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FES_MigrationInfo_v2%2FResources%2FWSDL%2FSOAP12%2FUpdate_MigrationInfo_v1_EBM</con:url><con:content><![CDATA[<schema targetNamespace="http://www.entel.cl/EBM/MigrationInfo/Update/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:header="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:tns="http://www.entel.cl/EBM/MigrationInfo/Update/v1" xmlns:ebons_resource="http://www.entel.cl/EBO/Resource/v1" xmlns:ebons_msisdn="http://www.entel.cl/EBO/MSISDN/v1" xmlns:ebons_billingaccount="http://www.entel.cl/EBO/BillingAccount/v1" xmlns:ebons_contract="http://www.entel.cl/EBO/Contract/v1" xmlns:ebons_customeraccount="http://www.entel.cl/EBO/CustomerAccount/v1" xmlns:ebons_individual="http://www.entel.cl/EBO/Individual/v1" xmlns:ebons_asset="http://www.entel.cl/EBO/Asset/v1" xmlns:ebons_individualidentification="http://www.entel.cl/EBO/IndividualIdentification/v1" xmlns:ebons_migration="http://www.entel.cl/EBO/Migration/v1">
+  <!---=- start:Imports -= -->
+  <import namespace="http://www.entel.cl/ESO/MessageHeader/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FMessageHeader_v1_ESO"/>
+  <import namespace="http://www.entel.cl/EBO/Resource/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FResource_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/MSISDN/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMSISDN_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/BillingAccount/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FBillingAccount_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Contract/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FContract_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/CustomerAccount/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCustomerAccount_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Individual/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividual_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Asset/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FAsset_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/IndividualIdentification/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividualIdentification_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Migration/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMigration_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBM Content -= -->
+  <element name="Update_MigrationInfo_REQ" type="tns:Update_MigrationInfo_REQ_Type"/>
+  <complexType name="Update_MigrationInfo_REQ_Type">
+    <sequence>
+      <element ref="header:RequestHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence>
+            <element name="CustomerAccount" maxOccurs="1" minOccurs="1">
+              <complexType>
+                <sequence>
+                  <element name="Asset" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element name="Contract" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_contract:ID" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element name="MSISDN" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_msisdn:SN" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element name="Resource" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_resource:id" maxOccurs="1" minOccurs="1"/>
+                              <element ref="ebons_resource:resourceType" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="BillingAccount" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element ref="ebons_billingaccount:externalID" maxOccurs="1" minOccurs="1"/>
+                        <element ref="ebons_billingaccount:status" maxOccurs="1" minOccurs="1"/>
+                        <element ref="ebons_billingaccount:statusChangeDate"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="Individual" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element name="IndividualIdentification" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_individualidentification:number" maxOccurs="1" minOccurs="1"/>
+                              <element ref="ebons_individualidentification:type" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="Migration" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element ref="ebons_migration:batchID" maxOccurs="1" minOccurs="0"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="Update_MigrationInfo_RSP" type="tns:Update_MigrationInfo_RSP_Type"/>
+  <complexType name="Update_MigrationInfo_RSP_Type">
+    <sequence>
+      <element ref="header:ResponseHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence/>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="Fault">
+    <complexType>
+      <sequence>
+        <element name="faultcode" type="string"/>
+        <element name="faultstring" type="string"/>
+        <element name="detail">
+          <complexType>
+            <sequence>
+              <element ref="tns:Update_MigrationInfo_FRSP"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="Update_MigrationInfo_FRSP" type="tns:Update_MigrationInfo_FRSP_Type"/>
+  <complexType name="Update_MigrationInfo_FRSP_Type">
+    <sequence>
+      <element ref="header:ResponseHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence/>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <!---=- end:EBM Content -= -->
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FES_MigrationInfo_v2%2FResources%2FWSDL%2FSOAP12%2FGet_MigrationInfo_v1_EBM</con:url><con:content><![CDATA[<schema targetNamespace="http://www.entel.cl/EBM/MigrationInfo/Get/v1" elementFormDefault="qualified" version="1.0" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:header="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:tns="http://www.entel.cl/EBM/MigrationInfo/Get/v1" xmlns:ebons_resource="http://www.entel.cl/EBO/Resource/v1" xmlns:ebons_msisdn="http://www.entel.cl/EBO/MSISDN/v1" xmlns:ebons_billingaccount="http://www.entel.cl/EBO/BillingAccount/v1" xmlns:ebons_contract="http://www.entel.cl/EBO/Contract/v1" xmlns:ebons_customeraccount="http://www.entel.cl/EBO/CustomerAccount/v1" xmlns:ebons_individual="http://www.entel.cl/EBO/Individual/v1" xmlns:ebons_asset="http://www.entel.cl/EBO/Asset/v1" xmlns:ebons_individualidentification="http://www.entel.cl/EBO/IndividualIdentification/v1" xmlns:ebons_migration="http://www.entel.cl/EBO/Migration/v1">
+  <!---=- start:Imports -= -->
+  <import namespace="http://www.entel.cl/ESO/MessageHeader/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FESO%2FMessageHeader_v1_ESO"/>
+  <import namespace="http://www.entel.cl/EBO/Resource/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FResource_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/MSISDN/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMSISDN_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/BillingAccount/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FBillingAccount_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Contract/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FContract_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/CustomerAccount/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FCustomerAccount_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Individual/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividual_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Asset/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FAsset_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/IndividualIdentification/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FIndividualIdentification_v1_EBO"/>
+  <import namespace="http://www.entel.cl/EBO/Migration/v1" schemaLocation="http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1?SCHEMA%2FSR_Commons%2FXSD%2FEBO%2FMigration_v1_EBO"/>
+  <!---=- end:Imports -= -->
+  <!---=- start:EBM Content -= -->
+  <element name="Get_MigrationInfo_REQ" type="tns:Get_MigrationInfo_REQ_Type"/>
+  <complexType name="Get_MigrationInfo_REQ_Type">
+    <sequence>
+      <element ref="header:RequestHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence>
+            <element name="CustomerAccount" maxOccurs="1" minOccurs="1">
+              <complexType>
+                <choice>
+                  <element name="Asset" maxOccurs="1" minOccurs="1">
+                    <complexType>
+                      <sequence>
+                        <element name="MSISDN" maxOccurs="1" minOccurs="1">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_msisdn:SN" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="Individual" maxOccurs="1" minOccurs="1">
+                    <complexType>
+                      <sequence>
+                        <element name="IndividualIdentification" maxOccurs="1" minOccurs="1">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_individualidentification:number" maxOccurs="1" minOccurs="1"/>
+                              <element ref="ebons_individualidentification:type" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </choice>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="Get_MigrationInfo_RSP" type="tns:Get_MigrationInfo_RSP_Type"/>
+  <complexType name="Get_MigrationInfo_RSP_Type">
+    <sequence>
+      <element ref="header:ResponseHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence>
+            <element name="CustomerAccount" maxOccurs="unbounded" minOccurs="0">
+              <complexType>
+                <sequence>
+                  <element name="Asset" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element name="Contract" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_contract:ID" maxOccurs="1" minOccurs="0"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element name="MSISDN" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_msisdn:SN" maxOccurs="1" minOccurs="1"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                        <element name="Resource" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_resource:id" maxOccurs="1" minOccurs="0"/>
+                              <element ref="ebons_resource:resourceType" maxOccurs="1" minOccurs="0"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="BillingAccount" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element ref="ebons_billingaccount:externalID" maxOccurs="1" minOccurs="0"/>
+                        <element ref="ebons_billingaccount:status" maxOccurs="1" minOccurs="0"/>
+                        <element ref="ebons_billingaccount:statusChangeDate"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="Individual" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element name="IndividualIdentification" maxOccurs="1" minOccurs="0">
+                          <complexType>
+                            <sequence>
+                              <element ref="ebons_individualidentification:number" maxOccurs="1" minOccurs="1"/>
+                              <element ref="ebons_individualidentification:type" maxOccurs="1" minOccurs="0"/>
+                            </sequence>
+                          </complexType>
+                        </element>
+                      </sequence>
+                    </complexType>
+                  </element>
+                  <element name="Migration" maxOccurs="1" minOccurs="0">
+                    <complexType>
+                      <sequence>
+                        <element ref="ebons_migration:batchID" maxOccurs="1" minOccurs="0"/>
+                      </sequence>
+                    </complexType>
+                  </element>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="Fault">
+    <complexType>
+      <sequence>
+        <element name="faultcode" type="string"/>
+        <element name="faultstring" type="string"/>
+        <element name="detail">
+          <complexType>
+            <sequence>
+              <element ref="tns:Get_MigrationInfo_FRSP"/>
+            </sequence>
+          </complexType>
+        </element>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="Get_MigrationInfo_FRSP" type="tns:Get_MigrationInfo_FRSP_Type"/>
+  <complexType name="Get_MigrationInfo_FRSP_Type">
+    <sequence>
+      <element ref="header:ResponseHeader"/>
+      <element name="Body">
+        <complexType>
+          <sequence/>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <!---=- end:EBM Content -= -->
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1</con:endpoint></con:endpoints><con:operation id="d4785d0b-0421-4ef7-92fa-191ed6367120" isOneWay="false" action="http://www.entel.cl/EBM/MigrationInfo/Create/v1" name="Create" bindingOperationName="Create" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c888868d-006b-4830-badf-b06b7becb22a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.entel.cl/EBM/MigrationInfo/Create/v1" xmlns:v11="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:v2="http://www.entel.cl/ESO/Result/v2" xmlns:v12="http://www.entel.cl/ESO/Error/v1" xmlns:v13="http://www.entel.cl/EBO/Contract/v1" xmlns:v14="http://www.entel.cl/EBO/MSISDN/v1" xmlns:v15="http://www.entel.cl/EBO/Resource/v1" xmlns:v16="http://www.entel.cl/EBO/BillingAccount/v1" xmlns:v17="http://www.entel.cl/EBO/IndividualIdentification/v1" xmlns:v18="http://www.entel.cl/EBO/Migration/v1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <v1:Create_MigrationInfo_REQ>\r
+         <v11:RequestHeader>\r
+            <v11:Consumer sysCode="?" enterpriseCode="?" countryCode="?"/>\r
+            <v11:Trace clientReqTimestamp="?" reqTimestamp="?" rspTimestamp="?" processID="?" eventID="?" sourceID="?" correlationEventID="?" conversationID="?" correlationID="?">\r
+               <!--Optional:-->\r
+               <v11:Service code="?" name="?" operation="?"/>\r
+            </v11:Trace>\r
+            <!--Optional:-->\r
+            <v11:Channel name="?" mode="?"/>\r
+            <!--Optional:-->\r
+            <v2:Result status="?" description="?">\r
+               <!--Optional:-->\r
+               <v12:CanonicalError code="?" description="?" type="?"/>\r
+               <!--Optional:-->\r
+               <v12:SourceError code="?" description="?">\r
+                  <v12:ErrorSourceDetails source="?" details="?"/>\r
+                  <!--Optional:-->\r
+                  <v12:SourceFault>?</v12:SourceFault>\r
+               </v12:SourceError>\r
+               <!--Optional:-->\r
+               <v2:CorrelativeErrors>\r
+                  <!--1 or more repetitions:-->\r
+                  <v12:SourceError code="?" description="?">\r
+                     <v12:ErrorSourceDetails source="?" details="?"/>\r
+                     <!--Optional:-->\r
+                     <v12:SourceFault>?</v12:SourceFault>\r
+                  </v12:SourceError>\r
+               </v2:CorrelativeErrors>\r
+            </v2:Result>\r
+         </v11:RequestHeader>\r
+         <v1:Body>\r
+            <v1:CustomerAccount>\r
+               <!--Optional:-->\r
+               <v1:Asset>\r
+                  <!--Optional:-->\r
+                  <v1:Contract>\r
+                     <v13:ID>?</v13:ID>\r
+                  </v1:Contract>\r
+                  <!--Optional:-->\r
+                  <v1:MSISDN>\r
+                     <v14:SN>?</v14:SN>\r
+                  </v1:MSISDN>\r
+                  <!--Optional:-->\r
+                  <v1:Resource>\r
+                     <v15:id>?</v15:id>\r
+                     <v15:resourceType>?</v15:resourceType>\r
+                  </v1:Resource>\r
+               </v1:Asset>\r
+               <!--Optional:-->\r
+               <v1:BillingAccount>\r
+                  <v16:externalID>?</v16:externalID>\r
+                  <v16:status>?</v16:status>\r
+                  <v16:statusChangeDate>?</v16:statusChangeDate>\r
+               </v1:BillingAccount>\r
+               <!--Optional:-->\r
+               <v1:Individual>\r
+                  <!--Optional:-->\r
+                  <v1:IndividualIdentification>\r
+                     <v17:number>?</v17:number>\r
+                     <v17:type>?</v17:type>\r
+                  </v1:IndividualIdentification>\r
+               </v1:Individual>\r
+               <!--Optional:-->\r
+               <v1:Migration>\r
+                  <!--Optional:-->\r
+                  <v18:batchID>?</v18:batchID>\r
+               </v1:Migration>\r
+            </v1:CustomerAccount>\r
+         </v1:Body>\r
+      </v1:Create_MigrationInfo_REQ>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.entel.cl/ESC/MigrationInfo/v1/MigrationInfo_PortType/CreateRequest"/></con:call></con:operation><con:operation id="2ce79faa-5539-4800-9ce5-2076eb63139b" isOneWay="false" action="http://www.entel.cl/EBM/MigrationInfo/Get/v1" name="Get" bindingOperationName="Get" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4b1f1380-52b4-42e2-8bad-35f115b8c0ec" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://eusbpreprod.entel.pe:7010/ESC/MigrationInfo/v1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.entel.cl/EBM/MigrationInfo/Get/v1" xmlns:v11="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:v2="http://www.entel.cl/ESO/Result/v2" xmlns:v12="http://www.entel.cl/ESO/Error/v1" xmlns:v13="http://www.entel.cl/EBO/MSISDN/v1" xmlns:v14="http://www.entel.cl/EBO/IndividualIdentification/v1">\r
+      <soap:Header/>
+  <soap:Body>
+      <v1:Get_MigrationInfo_REQ>
+         <v11:RequestHeader>
+  <v11:Consumer sysCode="PER-CRM-UTI" enterpriseCode="ENTEL-PER" countryCode="PER"/>
+   <v11:Trace clientReqTimestamp="2017-02-26T11:00:00Z" processID="" eventID="0201OPER_00018201608041100000001234567890987654090">
+  <v11:Service code="OPER_00018" name="MigrationInfo" operation="GetMigrationInfo"/>
+            </v11:Trace>
+            <v11:Channel name="SUCURSAL PROPIA" mode="PRESENCIAL"/>
+         </v11:RequestHeader>
+         <v1:Body>
+            <v1:CustomerAccount>
+               <v1:Asset>
+                  <v1:MSISDN><!--998102960-julio-51926736213-->
+                     <v13:SN>51923084993</v13:SN>
+                  </v1:MSISDN>
+               </v1:Asset>
+            </v1:CustomerAccount>
+         </v1:Body>
+      </v1:Get_MigrationInfo_REQ>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.entel.cl/ESC/MigrationInfo/v1/MigrationInfo_PortType/GetRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="019c36b9-b8c0-4028-bb0d-35414ffe20fb" isOneWay="false" action="http://www.entel.cl/EBM/MigrationInfo/Update/v1" name="Update" bindingOperationName="Update" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8731ce9e-0781-475d-84bf-c69df1ee1294" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://eusbist.entel.pe:7010/ESC/MigrationInfo/v1</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:v1="http://www.entel.cl/EBM/MigrationInfo/Update/v1" xmlns:v11="http://www.entel.cl/ESO/MessageHeader/v1" xmlns:v2="http://www.entel.cl/ESO/Result/v2" xmlns:v12="http://www.entel.cl/ESO/Error/v1" xmlns:v13="http://www.entel.cl/EBO/Contract/v1" xmlns:v14="http://www.entel.cl/EBO/MSISDN/v1" xmlns:v15="http://www.entel.cl/EBO/Resource/v1" xmlns:v16="http://www.entel.cl/EBO/BillingAccount/v1" xmlns:v17="http://www.entel.cl/EBO/IndividualIdentification/v1" xmlns:v18="http://www.entel.cl/EBO/Migration/v1">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <v1:Update_MigrationInfo_REQ>\r
+         <v11:RequestHeader>\r
+            <v11:Consumer sysCode="?" enterpriseCode="?" countryCode="?"/>\r
+            <v11:Trace clientReqTimestamp="?" reqTimestamp="?" rspTimestamp="?" processID="?" eventID="?" sourceID="?" correlationEventID="?" conversationID="?" correlationID="?">\r
+               <!--Optional:-->\r
+               <v11:Service code="?" name="?" operation="?"/>\r
+            </v11:Trace>\r
+            <!--Optional:-->\r
+            <v11:Channel name="?" mode="?"/>\r
+            <!--Optional:-->\r
+            <v2:Result status="?" description="?">\r
+               <!--Optional:-->\r
+               <v12:CanonicalError code="?" description="?" type="?"/>\r
+               <!--Optional:-->\r
+               <v12:SourceError code="?" description="?">\r
+                  <v12:ErrorSourceDetails source="?" details="?"/>\r
+                  <!--Optional:-->\r
+                  <v12:SourceFault>?</v12:SourceFault>\r
+               </v12:SourceError>\r
+               <!--Optional:-->\r
+               <v2:CorrelativeErrors>\r
+                  <!--1 or more repetitions:-->\r
+                  <v12:SourceError code="?" description="?">\r
+                     <v12:ErrorSourceDetails source="?" details="?"/>\r
+                     <!--Optional:-->\r
+                     <v12:SourceFault>?</v12:SourceFault>\r
+                  </v12:SourceError>\r
+               </v2:CorrelativeErrors>\r
+            </v2:Result>\r
+         </v11:RequestHeader>\r
+         <v1:Body>\r
+            <v1:CustomerAccount>\r
+               <!--Optional:-->\r
+               <v1:Asset>\r
+                  <!--Optional:-->\r
+                  <v1:Contract>\r
+                     <v13:ID>?</v13:ID>\r
+                  </v1:Contract>\r
+                  <!--Optional:-->\r
+                  <v1:MSISDN>\r
+                     <v14:SN>?</v14:SN>\r
+                  </v1:MSISDN>\r
+                  <!--Optional:-->\r
+                  <v1:Resource>\r
+                     <v15:id>?</v15:id>\r
+                     <v15:resourceType>?</v15:resourceType>\r
+                  </v1:Resource>\r
+               </v1:Asset>\r
+               <!--Optional:-->\r
+               <v1:BillingAccount>\r
+                  <v16:externalID>?</v16:externalID>\r
+                  <v16:status>?</v16:status>\r
+                  <v16:statusChangeDate>?</v16:statusChangeDate>\r
+               </v1:BillingAccount>\r
+               <!--Optional:-->\r
+               <v1:Individual>\r
+                  <!--Optional:-->\r
+                  <v1:IndividualIdentification>\r
+                     <v17:number>?</v17:number>\r
+                     <v17:type>?</v17:type>\r
+                  </v1:IndividualIdentification>\r
+               </v1:Individual>\r
+               <!--Optional:-->\r
+               <v1:Migration>\r
+                  <!--Optional:-->\r
+                  <v18:batchID>?</v18:batchID>\r
+               </v1:Migration>\r
+            </v1:CustomerAccount>\r
+         </v1:Body>\r
+      </v1:Update_MigrationInfo_REQ>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.entel.cl/ESC/MigrationInfo/v1/MigrationInfo_PortType/UpdateRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

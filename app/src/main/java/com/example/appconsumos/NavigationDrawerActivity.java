@@ -9,7 +9,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,6 +19,10 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -149,8 +155,23 @@ public class NavigationDrawerActivity extends AppCompatActivity
         } else if (id == R.id.nav_send) {
             Log.i("====>","Click en ...CERRAR SESION!!");
             //Intent k = new Intent(this, CategoriasActivity.class);
-            Intent k = new Intent(this, LoginActivity.class);
-            startActivity(k);
+            final Intent k = new Intent(this, LoginActivity.class);
+
+            //LoginFireBase
+            AuthUI.getInstance()
+                    .signOut(NavigationDrawerActivity.this)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            startActivity(k);
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(NavigationDrawerActivity.this,""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                }
+            });
+
 
             return true;
         }
