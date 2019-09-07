@@ -26,8 +26,6 @@
 
     <!--Login-->
     <string name="facebook_application_id">413826509490513</string>
-    <string name="facebook_login_protocol_scheme" translatable="false">fb23123123123123</string>
-
-
+    <string name="fb_login_protocol_scheme">fb413826509490513</string>
 
 </resources>
